@@ -38,7 +38,6 @@
 		C7282A102CA074125E7DD6049EFFF8BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		DA55B4CE0ED755A4AAEF294253E9E6B0 /* UIImage+commonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED821B22BB8B3D7E0696F878E29D12B /* UIImage+commonExtension.swift */; };
 		EAA7BEC922F21B959B9997DCF691756A /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE152A9F7D3E4C40112DD4632E65DD43 /* UIAlertViewController+Extension.swift */; };
-		EE3B2B6AD87D546D9BA3172A53158BCB /* RxSwift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAD78A03BF1FC2C00BB2084CE04EC85 /* RxSwift+Extension.swift */; };
 		EFBFFFCA502E501ABFE8118BCE6EFC1A /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A40801299D665F72FCCEB2930EBE53 /* Dictionary+Extension.swift */; };
 		EFCA48614C286C973DD0743CA08FFE73 /* TimerInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10493F388D55F8F2B6920481BB6B05CE /* TimerInterval+Extension.swift */; };
 		FB4469A5A0C72B02ECBDAF408A1FE845 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C213433A98814987D1573D191F03CE0 /* CGSize+Extension.swift */; };
@@ -77,7 +76,6 @@
 		29BA887966F623895C8A27F4AD57D00F /* Pods-GGXSwiftExtension_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGXSwiftExtension_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2C213433A98814987D1573D191F03CE0 /* CGSize+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Extension.swift"; path = "GGXSwiftExtension/Classes/CGSize+Extension.swift"; sourceTree = "<group>"; };
 		2CCABDA4B8955C278097A2E214F530DE /* Pods-GGXSwiftExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGXSwiftExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3DAD78A03BF1FC2C00BB2084CE04EC85 /* RxSwift+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RxSwift+Extension.swift"; path = "GGXSwiftExtension/Classes/RxSwift+Extension.swift"; sourceTree = "<group>"; };
 		4BB80FEC32A48F96D4D7A2117042FCA9 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GGXSwiftExtension/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		50B1E39F094394D72D8B1E6BA63A482B /* Pods-GGXSwiftExtension_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GGXSwiftExtension_Tests.modulemap"; sourceTree = "<group>"; };
 		54F8D6D065983844BB62428797BE861D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extension.swift"; path = "GGXSwiftExtension/Classes/UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				74C2096A88D74A026E2F7B6AF5A74787 /* FileManager+Extension.swift */,
 				0473253CB7A5A3DE7834EE09338E98EA /* Int+Extension.swift */,
 				4BB80FEC32A48F96D4D7A2117042FCA9 /* ReplaceMe.swift */,
-				3DAD78A03BF1FC2C00BB2084CE04EC85 /* RxSwift+Extension.swift */,
 				C3E0D06617DFC33CF5C1B11E8BAD0EC8 /* String+Extension.swift */,
 				10493F388D55F8F2B6920481BB6B05CE /* TimerInterval+Extension.swift */,
 				FE152A9F7D3E4C40112DD4632E65DD43 /* UIAlertViewController+Extension.swift */,
@@ -461,7 +458,6 @@
 				6804C0C9E90EC7E37F8DACF02D7D6550 /* GGXSwiftExtension-dummy.m in Sources */,
 				638B8A55D68309253CC826FF8C796FF5 /* Int+Extension.swift in Sources */,
 				1678D9897D93EF845044CEB631AD9727 /* ReplaceMe.swift in Sources */,
-				EE3B2B6AD87D546D9BA3172A53158BCB /* RxSwift+Extension.swift in Sources */,
 				3221960EF76BF39D8508E075FBFEE956 /* String+Extension.swift in Sources */,
 				EFCA48614C286C973DD0743CA08FFE73 /* TimerInterval+Extension.swift in Sources */,
 				EAA7BEC922F21B959B9997DCF691756A /* UIAlertViewController+Extension.swift in Sources */,
