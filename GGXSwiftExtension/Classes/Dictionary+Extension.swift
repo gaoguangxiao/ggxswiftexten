@@ -20,6 +20,27 @@ public extension Dictionary {
         dict.merge(with: dictionary)
         return dict
     }
+    
+    var toJsonString: String? {
+        guard JSONSerialization.isValidJSONObject(base) else {
+            return nil
+        }
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: base, options: []) else {
+            return nil
+        }
+        return String(data: jsonData, encoding: .utf8)
+    }
+
+    /// 字典到json字符串
+    var toPrettyString: String? {
+        guard JSONSerialization.isValidJSONObject(base) else {
+            return nil
+        }
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: base, options: .prettyPrinted) else {
+            return nil
+        }
+        return String(data: jsonData, encoding: .utf8)
+    }
 }
 
 public extension Dictionary where Key: Comparable, Value: Equatable {
