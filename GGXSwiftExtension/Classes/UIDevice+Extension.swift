@@ -94,36 +94,6 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
  */
 @objc public extension UIDevice {
     
-    static var deviceUserAgent: String = {
-        var systemVersion = UIDevice.current.systemVersion.replacingOccurrences(of: ".", with: "_")
-        var systemName = ""
-        if isIPad {
-            systemName = "OS"
-        } else {
-            systemName = "iPhone OS"
-        }
-        var newUA = "Mozilla/5.0 (\(UIDevice.current.model); CPU \(systemName) \(systemVersion) like Mac OS X; \(modelName)) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
-        let appVersion = kAppVersion ?? ""
-        let appBuildVersion = kAppBuildVersion ?? ""
-        newUA +=  " Adventure/" + appVersion + " Build/" + appBuildVersion +  " Factory/apple" + " Channel/\(getChannel())"
-        UserDefaults.standard.register(defaults: ["UserAgent":newUA])
-        UserDefaults.standard.synchronize()
-        return newUA
-    }()
-    
-    class func getChannel() -> String {
-        var channel = "null"
-//        #if DEBUG
-//        #else
-//        if AppUtils.isAppStore {
-//            channel = "appstore"
-//        } else if AppUtils.isTestFlight {
-//            channel = "testflight"
-//        }
-//        #endif
-        return channel
-    }
-    
     /// 是否是 testflight包
     static var isTestFlight: Bool = {
         return isAppStoreReceiptSandbox && !hasEmbeddedMobileProvision
