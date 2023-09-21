@@ -22,10 +22,10 @@ public extension Dictionary {
     }
     
     var toJsonString: String? {
-        guard JSONSerialization.isValidJSONObject(base) else {
+        guard JSONSerialization.isValidJSONObject(self) else {
             return nil
         }
-        guard let jsonData = try? JSONSerialization.data(withJSONObject: base, options: []) else {
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: self, options: []) else {
             return nil
         }
         return String(data: jsonData, encoding: .utf8)
@@ -33,10 +33,10 @@ public extension Dictionary {
 
     /// 字典到json字符串
     var toPrettyString: String? {
-        guard JSONSerialization.isValidJSONObject(base) else {
+        guard JSONSerialization.isValidJSONObject(self) else {
             return nil
         }
-        guard let jsonData = try? JSONSerialization.data(withJSONObject: base, options: .prettyPrinted) else {
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted) else {
             return nil
         }
         return String(data: jsonData, encoding: .utf8)

@@ -16,8 +16,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //String扩展
-        stringToURL()
+//        stringToURL()
         
+        //
+        dictExtension()
     }
     
     func stringToURL() {
@@ -35,7 +37,19 @@ class ViewController: UIViewController {
         if let uEurl = eUrl {
             print("uEurl" , uEurl)
         }
-
+    }
+    
+    func dictExtension() {
+        let operateList = ["scope","oss"]
+        let text = "text"
+        let path = "//sadadadad"
+        
+        let dict : [String : Any] = ["operateList":operateList,
+                    "path":path,
+                    "text":text]
+        
+        let json = dict.toJsonString ?? ""
+        print(json)
     }
 
     override func didReceiveMemoryWarning() {
