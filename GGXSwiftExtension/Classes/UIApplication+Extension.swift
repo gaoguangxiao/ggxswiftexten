@@ -1,5 +1,5 @@
 //
-//  UIApplication+CommonExtension.swift
+//  UIApplication+Extension.swift
 //  DaDaClass
 //
 //  Created by problemchild on 2018/4/4.
@@ -24,30 +24,32 @@ import UIKit
         return vc
     }
 
-    /// build号 - 关于里面显示的版本号
-    static var buildNumber: String {
-        return Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
-    }
-
-    // 版本号 - 应用程序的版本号标识
-    dynamic static var versionNumber: String {
-        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
-    }
-
-    // AppName - APP装到手机里之后显示的名称
-    static var displayName: String {
-        return Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as? String ?? ""
-    }
-    
-    static var bundleIdentifier: String {
-        return Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String ?? ""
-    }
-
     static var appIcon: UIImage? {
         guard let iconsDictionary = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String: Any],
             let primaryIconsDictionary = iconsDictionary["CFBundlePrimaryIcon"] as? [String: Any],
             let iconFiles = primaryIconsDictionary["CFBundleIconFiles"] as? [String],
             let lastIcon = iconFiles.last else { return nil }
         return UIImage(named: lastIcon)
+    }
+    
+    @available(iOS 13.0, *)
+    static var windowScenes: [UIWindowScene] {
+        UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene}).compactMap({$0})
+    }
+    
+    /// 获取跟root窗口
+    static var rootWindow: UIWindow? {
+        var window: UIWindow?
+        if #available(iOS 13.0, *) {
+            outer: for s in windowScenes {
+                for w in s.windows where w.isMember(of: UIWindow.self) {
+                    window = w
+                    break outer
+                }
+            }
+        }
+        return window ?? UIApplication.shared.windows.first
     }
 }

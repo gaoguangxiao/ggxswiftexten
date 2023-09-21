@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         
         //
         dictExtension()
+        
+//        UIApplication.rootWindow?.window
     }
     
     func stringToURL() {
