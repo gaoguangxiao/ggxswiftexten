@@ -1,5 +1,5 @@
 import XCTest
-//import GGXSwiftExtension
+import GGXSwiftExtension
 
 class Tests: XCTestCase {
     

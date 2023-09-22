@@ -14,7 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GGXSwiftExtension_Tests.xcscheme</key>
+		<key>Pods-GGXSwiftExtension_ExampleTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

@@ -1,7 +1,7 @@
 {
   "name": "GGXSwiftExtension",
-  "version": "0.1.3",
-  "summary": "增加字典扩展",
+  "version": "0.1.7",
+  "summary": "Device的扩展",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://gitee.com/gtools",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://gitee.com/gtools/ggxswift-extension.git",
-    "tag": "0.1.3"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "10.0"

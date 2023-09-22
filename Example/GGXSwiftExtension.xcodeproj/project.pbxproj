@@ -10,6 +10,8 @@
 		1D15CFC0280D10890F396E85 /* Pods_GGXSwiftExtension_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE87E280BFFD0DDE8340E3FB /* Pods_GGXSwiftExtension_Example.framework */; };
 		1E53CBB52ABD3D270075BC42 /* JSBridgeAPITest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */; };
 		1E6E86902ABC3E1A0023552F /* 111.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E868F2ABC3E1A0023552F /* 111.mov */; };
+		1E8494822ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8494812ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift */; };
+		1F3BDA947307EBE598B39722 /* Pods_GGXSwiftExtension_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1166E6F1603AAC90169954D /* Pods_GGXSwiftExtension_ExampleTests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -17,11 +19,24 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1E8494832ABD944A00356356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = GGXSwiftExtension_Example;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		19EED5B6CE41C2CF4803C950 /* Pods-GGXSwiftExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_Tests/Pods-GGXSwiftExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1E28C238D8C64DC970A45EC4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSBridgeAPITest.json; sourceTree = "<group>"; };
 		1E6E868F2ABC3E1A0023552F /* 111.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 111.mov; sourceTree = "<group>"; };
+		1E84947F2ABD944A00356356 /* GGXSwiftExtension_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGXSwiftExtension_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E8494812ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGXSwiftExtension_ExampleTests.swift; sourceTree = "<group>"; };
+		27F83DE6B78AF09AD32842F3 /* Pods-GGXSwiftExtension_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_ExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_ExampleTests/Pods-GGXSwiftExtension_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4993E3D7E3C8150F94D46E45 /* Pods-GGXSwiftExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_Example/Pods-GGXSwiftExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GGXSwiftExtension_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGXSwiftExtension_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +49,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8A59046D7A4D1CDBEFC36321 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GGXSwiftExtension.podspec; path = ../GGXSwiftExtension.podspec; sourceTree = "<group>"; };
 		96468A5484DCF62D65F3CA46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A1166E6F1603AAC90169954D /* Pods_GGXSwiftExtension_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGXSwiftExtension_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD13B6DC81671A834F8FBAAE /* Pods-GGXSwiftExtension_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_ExampleTests.release.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_ExampleTests/Pods-GGXSwiftExtension_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		B55B903385E66CE749527ED9 /* Pods-GGXSwiftExtension_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_Tests.release.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_Tests/Pods-GGXSwiftExtension_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CE87E280BFFD0DDE8340E3FB /* Pods_GGXSwiftExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGXSwiftExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB9DD7CCAE4D8F1699305D5 /* Pods_GGXSwiftExtension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGXSwiftExtension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +58,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E84947C2ABD944A00356356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F3BDA947307EBE598B39722 /* Pods_GGXSwiftExtension_ExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E8494802ABD944A00356356 /* GGXSwiftExtension_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E8494812ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift */,
+			);
+			path = GGXSwiftExtension_ExampleTests;
+			sourceTree = "<group>";
+		};
 		53AD587919A5C50E11248364 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +92,8 @@
 				4993E3D7E3C8150F94D46E45 /* Pods-GGXSwiftExtension_Example.release.xcconfig */,
 				19EED5B6CE41C2CF4803C950 /* Pods-GGXSwiftExtension_Tests.debug.xcconfig */,
 				B55B903385E66CE749527ED9 /* Pods-GGXSwiftExtension_Tests.release.xcconfig */,
+				27F83DE6B78AF09AD32842F3 /* Pods-GGXSwiftExtension_ExampleTests.debug.xcconfig */,
+				AD13B6DC81671A834F8FBAAE /* Pods-GGXSwiftExtension_ExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -69,6 +104,7 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for GGXSwiftExtension */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				1E8494802ABD944A00356356 /* GGXSwiftExtension_ExampleTests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				53AD587919A5C50E11248364 /* Pods */,
 				F6954020D1FE576D49382E15 /* Frameworks */,
@@ -79,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* GGXSwiftExtension_Example.app */,
+				1E84947F2ABD944A00356356 /* GGXSwiftExtension_ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +176,7 @@
 			children = (
 				CE87E280BFFD0DDE8340E3FB /* Pods_GGXSwiftExtension_Example.framework */,
 				EDB9DD7CCAE4D8F1699305D5 /* Pods_GGXSwiftExtension_Tests.framework */,
+				A1166E6F1603AAC90169954D /* Pods_GGXSwiftExtension_ExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -146,6 +184,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E84947E2ABD944A00356356 /* GGXSwiftExtension_ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E8494872ABD944A00356356 /* Build configuration list for PBXNativeTarget "GGXSwiftExtension_ExampleTests" */;
+			buildPhases = (
+				1F41BBBD9ABE0504B490D2DA /* [CP] Check Pods Manifest.lock */,
+				1E84947B2ABD944A00356356 /* Sources */,
+				1E84947C2ABD944A00356356 /* Frameworks */,
+				1E84947D2ABD944A00356356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E8494842ABD944A00356356 /* PBXTargetDependency */,
+			);
+			name = GGXSwiftExtension_ExampleTests;
+			productName = GGXSwiftExtension_ExampleTests;
+			productReference = 1E84947F2ABD944A00356356 /* GGXSwiftExtension_ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		607FACCF1AFB9204008FA782 /* GGXSwiftExtension_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "GGXSwiftExtension_Example" */;
@@ -171,10 +228,16 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					1E84947E2ABD944A00356356 = {
+						CreatedOnToolsVersion = 15.0;
+						DevelopmentTeam = ZURSBPY7B4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = M6KU4P4925;
@@ -197,11 +260,19 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* GGXSwiftExtension_Example */,
+				1E84947E2ABD944A00356356 /* GGXSwiftExtension_ExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E84947D2ABD944A00356356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +288,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1F41BBBD9ABE0504B490D2DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GGXSwiftExtension_ExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1F564C3B825F92AA8B87EFFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +353,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E84947B2ABD944A00356356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E8494822ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,6 +371,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E8494842ABD944A00356356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* GGXSwiftExtension_Example */;
+			targetProxy = 1E8494832ABD944A00356356 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
@@ -291,6 +400,77 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E8494852ABD944A00356356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27F83DE6B78AF09AD32842F3 /* Pods-GGXSwiftExtension_ExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ZURSBPY7B4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "ggx.GGXSwiftExtension-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GGXSwiftExtension_Example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GGXSwiftExtension_Example";
+			};
+			name = Debug;
+		};
+		1E8494862ABD944A00356356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD13B6DC81671A834F8FBAAE /* Pods-GGXSwiftExtension_ExampleTests.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZURSBPY7B4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "ggx.GGXSwiftExtension-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GGXSwiftExtension_Example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GGXSwiftExtension_Example";
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -427,6 +607,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E8494872ABD944A00356356 /* Build configuration list for PBXNativeTarget "GGXSwiftExtension_ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E8494852ABD944A00356356 /* Debug */,
+				1E8494862ABD944A00356356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "GGXSwiftExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

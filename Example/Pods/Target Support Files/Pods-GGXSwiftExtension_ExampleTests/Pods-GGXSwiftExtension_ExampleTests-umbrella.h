@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_GGXSwiftExtension_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_GGXSwiftExtension_TestsVersionString[];
+FOUNDATION_EXPORT double Pods_GGXSwiftExtension_ExampleTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_GGXSwiftExtension_ExampleTestsVersionString[];
 
