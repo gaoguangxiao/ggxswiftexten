@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16C9EDD558D406133D2E4325 /* Pods_GGXSwiftExtension_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB9DD7CCAE4D8F1699305D5 /* Pods_GGXSwiftExtension_Tests.framework */; };
 		1D15CFC0280D10890F396E85 /* Pods_GGXSwiftExtension_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE87E280BFFD0DDE8340E3FB /* Pods_GGXSwiftExtension_Example.framework */; };
+		1E53CBB52ABD3D270075BC42 /* JSBridgeAPITest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */; };
 		1E6E86902ABC3E1A0023552F /* 111.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E868F2ABC3E1A0023552F /* 111.mov */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		19EED5B6CE41C2CF4803C950 /* Pods-GGXSwiftExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_Tests/Pods-GGXSwiftExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1E28C238D8C64DC970A45EC4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSBridgeAPITest.json; sourceTree = "<group>"; };
 		1E6E868F2ABC3E1A0023552F /* 111.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 111.mov; sourceTree = "<group>"; };
 		4993E3D7E3C8150F94D46E45 /* Pods-GGXSwiftExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_Example/Pods-GGXSwiftExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GGXSwiftExtension_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGXSwiftExtension_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,7 @@
 		607FACD21AFB9204008FA782 /* Example for GGXSwiftExtension */ = {
 			isa = PBXGroup;
 			children = (
+				1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */,
 				1E6E868F2ABC3E1A0023552F /* 111.mov */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				1E53CBB52ABD3D270075BC42 /* JSBridgeAPITest.json in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				1E6E86902ABC3E1A0023552F /* 111.mov in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,

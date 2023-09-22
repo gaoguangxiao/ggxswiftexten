@@ -16,6 +16,7 @@
 		139017FA1999D22848EF3E33E89BB55F /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204046E5B930FC44A066629386D4AF80 /* CGSize+Extension.swift */; };
 		1A0BD6E80AB538590D63C18D27538CE3 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E3E8412AF664889DF5ACA723EFA32 /* Date+Extension.swift */; };
 		1AAEC103939157794AF50483C795CF89 /* GGXSwiftExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC427F64A67CF5512148E6AEB251D4D /* GGXSwiftExtension-dummy.m */; };
+		1E53CBBB2ABD435A0075BC42 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53CBBA2ABD435A0075BC42 /* Bundle+Extension.swift */; };
 		269B9DEC218FC22A2A756E915DE32933 /* TimerInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7D82E0E23BD92D2A477A60F5293AFA /* TimerInterval+Extension.swift */; };
 		27E808BAD9403865D566D0D50E158BB5 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBCC8A7C502BE5D508BDE560AA00D12 /* UINavigationBar+Extension.swift */; };
 		2C370A7BFD0AFD0D9708B5A961733717 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00C561AD37AB474A811A0789B49CB1 /* Dictionary+Extension.swift */; };
@@ -67,7 +68,8 @@
 		07144614FE19A735AC3989108FB37E2E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0A34F63979C4A7E2676E97C96B06EEC6 /* Pods-GGXSwiftExtension_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GGXSwiftExtension_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1AECD6CA16EFE8B135E0193C9F9EFF1D /* Pods-GGXSwiftExtension_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGXSwiftExtension_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1B21EF6536C191F9B0543A89C207F057 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1B21EF6536C191F9B0543A89C207F057 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		1E53CBBA2ABD435A0075BC42 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Bundle+Extension.swift"; path = "GGXSwiftExtension/Classes/Bundle+Extension.swift"; sourceTree = "<group>"; };
 		204046E5B930FC44A066629386D4AF80 /* CGSize+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Extension.swift"; path = "GGXSwiftExtension/Classes/CGSize+Extension.swift"; sourceTree = "<group>"; };
 		227472513CB5CD24B40812258FA5F275 /* Pods-GGXSwiftExtension_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGXSwiftExtension_Tests-Info.plist"; sourceTree = "<group>"; };
 		29485096F8FDF3297A99A137DA1DF068 /* UIKit+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Extension.swift"; path = "GGXSwiftExtension/Classes/UIKit+Extension.swift"; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				774527A09F33F0FA30889C105EF1D676 /* Array+extension.swift */,
 				AFFBFB31FFA8EF537F57756C8B882333 /* AttributeString+Extension.swift */,
+				1E53CBBA2ABD435A0075BC42 /* Bundle+Extension.swift */,
 				204046E5B930FC44A066629386D4AF80 /* CGSize+Extension.swift */,
 				D80E3E8412AF664889DF5ACA723EFA32 /* Date+Extension.swift */,
 				B169476C704A56D5EA8BA45767D7EDEB /* DateFormatter+Extension.swift */,
@@ -204,8 +207,10 @@
 				6507ACC050BF5EB8F705A2A616AD5750 /* Double+Extension.swift */,
 				FBA43CC608C4D0C6A302B5C128D363D3 /* FileManager+Extension.swift */,
 				A8751EACE61B464A617B690124DDCCBE /* Int+Extension.swift */,
+				E9FD1EB11AE6C33046095920AF0B74E2 /* Pod */,
 				6EF26CB1ED99B0373A78C759D1F21004 /* ReplaceMe.swift */,
 				B716B25724C94C0259DF1445893AC165 /* String+Extension.swift */,
+				CDA176D09AD223DA522E999C7AD7110B /* Support Files */,
 				8B7D82E0E23BD92D2A477A60F5293AFA /* TimerInterval+Extension.swift */,
 				4DCC1CB2B99522E54D0B6E7F95A593FF /* UIAlertViewController+Extension.swift */,
 				8489142637F4788FFBE4614F5184D486 /* UIApplication+Extension.swift */,
@@ -220,8 +225,6 @@
 				7810972240BAE73E7385B34E5DCE746B /* UITableViewCell+Extension.swift */,
 				C767CC4CF8A6A6F27463FC5A8FA8486D /* UIView+Extension.swift */,
 				5B3A61D7F75E76A8E87AB2DBBA3472FF /* URL+Extension.swift */,
-				E9FD1EB11AE6C33046095920AF0B74E2 /* Pod */,
-				CDA176D09AD223DA522E999C7AD7110B /* Support Files */,
 			);
 			name = GGXSwiftExtension;
 			path = ../..;
@@ -448,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				583F0F9F428A46684029768E9757AD84 /* Array+extension.swift in Sources */,
+				1E53CBBB2ABD435A0075BC42 /* Bundle+Extension.swift in Sources */,
 				A2961CDB1C7D4C19DA20DB9B154F6E06 /* AttributeString+Extension.swift in Sources */,
 				139017FA1999D22848EF3E33E89BB55F /* CGSize+Extension.swift in Sources */,
 				1A0BD6E80AB538590D63C18D27538CE3 /* Date+Extension.swift in Sources */,

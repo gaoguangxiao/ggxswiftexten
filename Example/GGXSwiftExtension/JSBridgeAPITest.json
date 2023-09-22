@@ -1,0 +1,34 @@
+[
+    {
+        "action":"playAudio",
+        "data":{
+            "speed":1,
+            "track":"effect",
+            "url":"http://test.audio.risekid.cn/2023-09-18/01906a83-349d-4c1b-a575-f61839dbd59c.mp3"
+        }
+    },
+    {
+        "action":"pauseAudio",
+        "data":{
+            "track":"effect"
+        }
+    },
+    {
+        "action":"resumeAudio",
+        "data":{
+            "speed":1,
+            "track":"effect"
+        }
+    },
+    {
+        "action":"stopAudio",
+        "data":{
+            "track":"effect"
+        }
+    },{
+        "action":"playPlayback",
+        "data":{
+            "path":"/problem/1"
+        }
+    }
+]
