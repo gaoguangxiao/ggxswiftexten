@@ -24,8 +24,14 @@ class ViewController: UIViewController {
 //        UIApplication.rootWindow?.window
         
         //4、json文件解析
-        let d = jsonfileTojsonStr()
-        print(d)
+//        let d = jsonfileTojsonStr()
+//        print(d)
+        
+        //5、导航栏高度
+        print("导航栏高度\(TopBarHeight)")
+        print("状态栏高度\(StatusBarHeight)")
+        print("底部安全域\(BOTTOM_MARGIN)")
+        print("设备型号\(UIDevice.modelName)")
     }
     
     func stringToURL() {

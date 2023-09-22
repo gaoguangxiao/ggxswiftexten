@@ -14,21 +14,6 @@ public let IS_47INCH_SCREEN = UIDevice.is47InchScreen
 public let IS_40INCH_SCREEN = UIDevice.is40InchScreen
 public let IS_35INCH_SCREEN = UIDevice.is35InchScreen
 
-// 状态栏高度(来电等情况下，状态栏高度会发生变化，所以应该实时计算)
-public var StatusBarHeight: CGFloat {
-    var statusBarHeight = 0.0
-    //    if @available(iOS 13.0, *) {
-    if #available(iOS 13.0, *) {
-        let statusBarManager = UIApplication.shared.windows.first?.windowScene?.statusBarManager
-    } else {
-        // Fallback on earlier versions
-    }
-    //    } else {
-    //        statusBarHeight = UIApplication.shared.statusBarFrame.height
-    //    }
-    return CGFloat(statusBarHeight)
-}
-
 /// navigationBar相关frame
 /// https://www.jianshu.com/p/d7b8f831c1f1
 public let NavigationBarHeight: CGFloat = {
@@ -45,12 +30,11 @@ public let NavigationBarHeight: CGFloat = {
     }
 }()
 
-public let TopBarHeight = StatusBarHeight + NavigationBarHeight
+public let StatusBarHeight: CGFloat = UIDevice.getStatusBarHeight
+public let TopBarHeight   : CGFloat = StatusBarHeight + NavigationBarHeight
 
-public let BOTTOM_MARGIN: CGFloat = UIDevice.isIPhoneX ? 34.0 : 0
-public let TOP_MARGIN: CGFloat = UIDevice.isIPhoneX ? 44 : 20
-
-public let ART_BOTTOM_MARGIN: CGFloat = UIDevice.isIPhoneX ? 44.0 : 0
+public let BOTTOM_MARGIN  : CGFloat = UIDevice.getTouchBarHeight
+public let TabBarHeight: CGFloat = BOTTOM_MARGIN + 49
 
 public let SCREEN_SCALE = UIScreen.main.scale
 
@@ -117,20 +101,7 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         return b
     }()
     
-    /// 系统给的型号
-    @objc static var systemModelName: String {
-        var systemInfo = utsname()
-        uname(&systemInfo)
-        let machineMirror = Mirror(reflecting: systemInfo.machine)
-        
-        let identifier = machineMirror.children.reduce("") { identifier, element in
-            guard let value = element.value as? Int8, value != 0 else {
-                return identifier
-            }
-            return identifier + String(UnicodeScalar(UInt8(value)))
-        }
-        return identifier
-    }
+    
     
     @objc static var language: String {
         let preferredLang = appSysTemLanguages
@@ -236,7 +207,13 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         case "iPhone14,3":                              return "iPhone 13 Pro Max"
         case "iPhone14,4":                              return "iPhone 13 mini"
         case "iPhone14,5":                              return "iPhone 13"
-            // iPod
+            
+        case "iPhone14,7":                              return "iPhone 14"
+        case "iPhone14,8":                              return "iPhone 14 Plus"
+        case "iPhone15,2":                              return "iPhone 14 Pro"
+        case "iPhone15,3":                              return "iPhone 14 Pro Max"
+
+        // iPod
         case "iPod1,1":                                 return "iPod Touch 1"
         case "iPod2,1":                                 return "iPod Touch 2"
         case "iPod3,1":                                 return "iPod Touch 3"
@@ -245,7 +222,7 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         case "iPod7,1":                                 return "iPod Touch 6"
         case "iPod9,1":                                 return "iPod Touch 7"
             
-            // iPad
+        // iPad
         case "iPad1,1":                                 return "iPad 1 (2010)"
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2 (2011)"
         case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad 3 (2012)"
@@ -254,31 +231,53 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         case "iPad7,5", "iPad7,6":                      return "iPad 6 (2018)"
         case "iPad7,11", "iPad7,12":                    return "iPad 7 (2019)"
         case "iPad11,6", "iPad11,7":                    return "iPad 8 (2020)"
+        case "iPad12,1", "iPad12,2":                    return "iPad 9 (2021)"
             
         case "iPad2,5", "iPad2,6", "iPad2,7":           return "iPad mini 1 (2012)"
         case "iPad4,4", "iPad4,5", "iPad4,6":           return "iPad mini 2"
         case "iPad4,7", "iPad4,8", "iPad4,9":           return "iPad mini 3"
         case "iPad5,1", "iPad5,2":                      return "iPad mini 4 (2015)"
-        case "iPad11,1", "iPad11,2":                    return "iPad mini 5 (2019)"
+        case "iPad11,1","iPad11,2":                     return "iPad mini 5 (2019)"
+        case "iPad14,1","iPad14,2":                     return "iPad Mini 6 (2022)"
             
         case "iPad4,1", "iPad4,2", "iPad4,3":           return "iPad Air"
         case "iPad5,3", "iPad5,4":                      return "iPad Air 2 (2014)"
         case "iPad11,3", "iPad11,4":                    return "iPad Air 3 (2019)"
         case "iPad13,1", "iPad13,2":                    return "iPad Air 4 (2020)"
             
-        case "iPad6,7", "iPad6,8":                      return "iPad Pro (12.9-inch) (2016)"
-        case "iPad6,3", "iPad6,4":                      return "iPad Pro (9.7-inch) (2016)"
-        case "iPad7,1", "iPad7,2":                      return "iPad Pro (12.9-inch) 2 (2017)"
-        case "iPad7,3", "iPad7,4":                      return "iPad Pro (10.5-inch) (2017)"
-        case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":return "iPad Pro (11-inch) (2018)"
-        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":return "iPad Pro (12.9-inch) 3 (2018)"
-        case "iPad8,9", "iPad8,10":                     return "iPad Pro (11-inch) 2 (2020)"
-        case "iPad8,11", "iPad8,12":                    return "iPad Pro (12.9-inch) 4 (2020)"
+        //ipad pro
+        case "iPad6,3", "iPad6,4":                       return "iPad Pro (9.7-inch) (2016)"
+        case "iPad7,3", "iPad7,4":                       return "iPad Pro (10.5-inch) (2017)"
+        case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4": return "iPad Pro (11-inch) (2018)"
+        case "iPad8,9", "iPad8,10":                      return "iPad Pro (11-inch) 2 (2020)"
+        case "iPad13,4","iPad13,5","iPad13,6","iPad13,7":return "iPad Pro (11-inch) 3 (2021)"
+        case "iPad14,3":                                 return "iPad Pro (11-inch) 4 (2022)"
             
+        case "iPad6,7", "iPad6,8":                       return "iPad Pro (12.9-inch) (2016)"
+        case "iPad7,1", "iPad7,2":                       return "iPad Pro (12.9-inch) 2 (2017)"
+        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8": return "iPad Pro (12.9-inch) 3 (2018)"
+        case "iPad8,11", "iPad8,12":                     return "iPad Pro (12.9-inch) 4 (2020)"
+        case "iPad13,8","iPad13,9","iPad13,10","iPad13,11": return "iPad Pro (12.9-inch) 5（2021）"
+        case "iPad14,8","iPad14,9","iPad14,10","iPad14,11": return "iPad Pro (12.9-inch) 6（2022）"
             
         case "i386", "x86_64":                          return UIDevice.simulatorIdentiferViaSize()
         default:                                        return identifier
         }
+    }
+    
+    /// 系统给的型号
+    @objc static var systemModelName: String {
+        var systemInfo = utsname()
+        uname(&systemInfo)
+        let machineMirror = Mirror(reflecting: systemInfo.machine)
+        
+        let identifier = machineMirror.children.reduce("") { identifier, element in
+            guard let value = element.value as? Int8, value != 0 else {
+                return identifier
+            }
+            return identifier + String(UnicodeScalar(UInt8(value)))
+        }
+        return identifier
     }
     
     /// 根据当前屏幕尺寸得到所有相符的型号如"iPhone 6, iPhone 6s, iPhone 7, iPhone 8"
@@ -451,5 +450,31 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
     
     @objc static var currentSystemVersion: Double {
         return Double(UIDevice.current.systemVersion) ?? 0
+    }
+    
+    /// 获取状态栏高度
+    fileprivate static var getStatusBarHeight: CGFloat {
+        var statusH = UIApplication.shared.statusBarFrame.height
+        if #available(iOS 13.0, *) {
+            statusH = UIApplication.rootWindow?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        }
+        if statusH == 0 {
+            if #available(iOS 11.0, *) {
+                statusH = UIApplication.rootWindow?.safeAreaInsets.top ?? 20
+            } else {
+                statusH = 20
+            }
+        }
+        return statusH
+    }
+    
+    //底部安全域
+    fileprivate static var getTouchBarHeight: CGFloat {
+        var touchBarH: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            touchBarH =
+            UIApplication.rootWindow?.safeAreaInsets.bottom ?? 0
+        }
+        return touchBarH
     }
 }
