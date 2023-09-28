@@ -24,6 +24,11 @@ class ViewController: UIViewController {
 //        UIApplication.rootWindow?.window
         
         //5、导航栏高度
+        
+        //6、音频base64
+        let filePath = Bundle.main.path(forResource: "20230919093347", ofType: "wav") ?? ""
+        let fileData = filePath.toFileUrl?.base64FileData
+        print(fileData)
     }
     
     func stringToURL() {

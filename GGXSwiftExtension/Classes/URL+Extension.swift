@@ -20,16 +20,27 @@ public extension URL {
             return dict
         }
     }
+    
+    
+    var base64FileData: String {
+        do {
+            let data = try Data(contentsOf: self)
+            return data.base64EncodedString()
+        } catch {
+            print("解析音频数据失败")
+            return ""
+        }
+    }
 
     ///  按照原顺序 取出Get请求中的参数，结果是一个大字典
     /// - Returns:结果是一个数组，每个元素是一个字典，（可以有序）
     func getParametersWithOrder() -> [[String: String]] {
         var queries = [[String: String]]()
         guard let query = query else { return queries }
-
+        
         let andChar = CharacterSet(charactersIn: "&")
         let queryComponents = query.components(separatedBy: andChar)
-
+        
         let equalChar = CharacterSet(charactersIn: "=")
         for component in queryComponents {
             let items = component.components(separatedBy: equalChar)
@@ -38,7 +49,7 @@ public extension URL {
             let queryPair = [firstItem: lastItem]
             queries.append(queryPair)
         }
-
+        
         return queries
     }
 }
