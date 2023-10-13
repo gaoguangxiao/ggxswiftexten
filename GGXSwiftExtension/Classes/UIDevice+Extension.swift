@@ -239,6 +239,7 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         case "iPad7,11", "iPad7,12":                    return "iPad 7 (2019)"
         case "iPad11,6", "iPad11,7":                    return "iPad 8 (2020)"
         case "iPad12,1", "iPad12,2":                    return "iPad 9 (2021)"
+        case "iPad13,18", "iPad13,19":                  return "iPad 10 (2022)"
             
         //iPad Mini
         case "iPad2,5", "iPad2,6", "iPad2,7":           return "iPad mini 1 (2012)"
@@ -261,16 +262,16 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4": return "iPad Pro (11-inch) (2018)"
         case "iPad8,9", "iPad8,10":                      return "iPad Pro (11-inch) 2 (2020)"
         case "iPad13,4","iPad13,5","iPad13,6","iPad13,7":return "iPad Pro (11-inch) 3 (2021)"
-        case "iPad14,3":                                 return "iPad Pro (11-inch) 4 (2022)"
+        case "iPad14,3","iPad14,4":                      return "iPad Pro (11-inch) 4 (2022)"
             
-        case "iPad6,7", "iPad6,8":                       return "iPad Pro (12.9-inch) (2016)"
-        case "iPad7,1", "iPad7,2":                       return "iPad Pro (12.9-inch) 2 (2017)"
-        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8": return "iPad Pro (12.9-inch) 3 (2018)"
-        case "iPad8,11", "iPad8,12":                     return "iPad Pro (12.9-inch) 4 (2020)"
+        case "iPad6,7", "iPad6,8":                          return "iPad Pro (12.9-inch) (2016)"
+        case "iPad7,1", "iPad7,2":                          return "iPad Pro (12.9-inch) 2 (2017)"
+        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":    return "iPad Pro (12.9-inch) 3 (2018)"
+        case "iPad8,11", "iPad8,12":                        return "iPad Pro (12.9-inch) 4 (2020)"
         case "iPad13,8","iPad13,9","iPad13,10","iPad13,11": return "iPad Pro (12.9-inch) 5（2021）"
-        case "iPad14,8","iPad14,9","iPad14,10","iPad14,11": return "iPad Pro (12.9-inch) 6（2022）"
+        case "iPad14,5","iPad14,6"                        : return "iPad Pro (12.9-inch) 6（2022）"
             
-        case "i386", "x86_64":                          return UIDevice.simulatorIdentiferViaSize()
+        case "i386", "x86_64","arm64":                      return UIDevice.simulatorIdentiferViaSize()
         default:                                        return identifier
         }
     }
@@ -309,11 +310,15 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         } else if (width == 320 && height == 480) || (width == 480 && height == 320) {
             return "Simulator iPhone 4, iPhone 4s, iPhone 2G, iPhone 3G, iPhone 3GS"
         } else if (width == 390 && height == 844) || (width == 844 && height == 390) {
-            return "Simulator iPhone 12, iPhone 12 Pro"
+            return "Simulator iPhone 12/12 Pro/13/13 Pro/14"
         } else if (width == 360 && height == 780) || (width == 780 && height == 360) {
-            return "Simulator iPhone 12 mini"
+            return "Simulator iPhone 12 Mini/13 Mini"
         } else if (width == 428 && height == 926) || (width == 926 && height == 428) {
-            return "Simulator iPhone 12 Pro Max"
+            return "Simulator iPhone 12 Pro Max/13 Pro Max/14 Plus"
+        } else if (width == 393 && height == 852) || (width == 852 && height == 393){
+            return "Simulator iPhone 14 Pro/15/15 Pro"
+        } else if (width == 430 && height == 932) || (width == 932 && height == 430){
+            return "Simulator iPhone 14 Pro Max/15 Plus/15 Pro Max"
         }
         
         // iPad

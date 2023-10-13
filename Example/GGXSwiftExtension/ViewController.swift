@@ -8,7 +8,7 @@
 
 import UIKit
 import GGXSwiftExtension
-
+import WebKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -24,15 +24,26 @@ class ViewController: UIViewController {
 //        UIApplication.rootWindow?.window
         
         //5、设备
-        print("\( UIDevice.modelName)")
-        print("物理尺寸：" + "\(SCREEN_HEIGHT)" + "*" + "\(SCREEN_WIDTH)")
-        print("缩放因子：" + "\(SCREEN_SCALE)")
-        print("像素分辨率：" + "\(SCREEN_HEIGHT * SCREEN_SCALE)" + "*" + "\(SCREEN_WIDTH * SCREEN_SCALE)")
+       testDevice()
         //6、音频base64
 //        let filePath = Bundle.main.path(forResource: "20230919093347", ofType: "wav") ?? ""
 //        let fileData = filePath.toFileUrl?.base64FileData
 //        print(fileData)
     }
+    
+    func testDevice(){
+        print("物理尺寸：" + "\(SCREEN_WIDTH)" + "*" + "\(SCREEN_HEIGHT)")
+        print("缩放因子：" + "\(SCREEN_SCALE)")
+        print("像素分辨率：" + "\(SCREEN_HEIGHT * SCREEN_SCALE)" + "*" + "\(SCREEN_WIDTH * SCREEN_SCALE)")
+        
+        print("导航栏高度\(TopBarHeight)")
+        print("状态栏高度\(StatusBarHeight)")
+        print("底部安全域\(BOTTOM_MARGIN)")
+        print("设备型号\(UIDevice.modelName)")
+        
+        
+    }
+    
     
     func stringToURL() {
         //测试
