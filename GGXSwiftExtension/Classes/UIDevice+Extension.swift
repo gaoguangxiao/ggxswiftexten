@@ -38,9 +38,10 @@ public let TabBarHeight: CGFloat = BOTTOM_MARGIN + 49
 
 public let SCREEN_SCALE = UIScreen.main.scale
 
-// 屏幕宽度，不会根据横竖屏的变化而变化
+
+public let SCREEN_WIDTH = UIScreen.main.bounds.width
 public let SCREEN_WIDTH_STATIC = UIScreen.main.bounds.width < UIScreen.main.bounds.height ? UIScreen.main.bounds.width : UIScreen.main.bounds.height
-// 屏幕高度，不会根据横竖屏的变化而变化
+public let SCREEN_HEIGHT = UIScreen.main.bounds.height
 public let SCREEN_HEIGHT_STATIC = UIScreen.main.bounds.width < UIScreen.main.bounds.height ? UIScreen.main.bounds.height : UIScreen.main.bounds.width
 
 /* app版本 以及设备系统版本 */
@@ -207,11 +208,17 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         case "iPhone14,3":                              return "iPhone 13 Pro Max"
         case "iPhone14,4":                              return "iPhone 13 mini"
         case "iPhone14,5":                              return "iPhone 13"
-            
+        
+        case "iPhone14,6":                              return "iPhone SE 3"
         case "iPhone14,7":                              return "iPhone 14"
         case "iPhone14,8":                              return "iPhone 14 Plus"
         case "iPhone15,2":                              return "iPhone 14 Pro"
         case "iPhone15,3":                              return "iPhone 14 Pro Max"
+            
+        case "iPhone15,4":                              return "iPhone 15"
+        case "iPhone15,5":                              return "iPhone 15 Plus"
+        case "iPhone16,1":                              return "iPhone 15 Pro"
+        case "iPhone16,2":                              return "iPhone 15 Pro Max"
 
         // iPod
         case "iPod1,1":                                 return "iPod Touch 1"
@@ -233,6 +240,7 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         case "iPad11,6", "iPad11,7":                    return "iPad 8 (2020)"
         case "iPad12,1", "iPad12,2":                    return "iPad 9 (2021)"
             
+        //iPad Mini
         case "iPad2,5", "iPad2,6", "iPad2,7":           return "iPad mini 1 (2012)"
         case "iPad4,4", "iPad4,5", "iPad4,6":           return "iPad mini 2"
         case "iPad4,7", "iPad4,8", "iPad4,9":           return "iPad mini 3"
@@ -240,12 +248,14 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         case "iPad11,1","iPad11,2":                     return "iPad mini 5 (2019)"
         case "iPad14,1","iPad14,2":                     return "iPad Mini 6 (2022)"
             
+        //iPad Air
         case "iPad4,1", "iPad4,2", "iPad4,3":           return "iPad Air"
         case "iPad5,3", "iPad5,4":                      return "iPad Air 2 (2014)"
         case "iPad11,3", "iPad11,4":                    return "iPad Air 3 (2019)"
         case "iPad13,1", "iPad13,2":                    return "iPad Air 4 (2020)"
-            
-        //ipad pro
+        case "iPad13,16", "iPad13,17":                  return "iPad Air 5 (2022)"
+        
+        //iPad Pro
         case "iPad6,3", "iPad6,4":                       return "iPad Pro (9.7-inch) (2016)"
         case "iPad7,3", "iPad7,4":                       return "iPad Pro (10.5-inch) (2017)"
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4": return "iPad Pro (11-inch) (2018)"

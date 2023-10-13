@@ -23,12 +23,15 @@ class ViewController: UIViewController {
 //        3、
 //        UIApplication.rootWindow?.window
         
-        //5、导航栏高度
-        
+        //5、设备
+        print("\( UIDevice.modelName)")
+        print("物理尺寸：" + "\(SCREEN_HEIGHT)" + "*" + "\(SCREEN_WIDTH)")
+        print("缩放因子：" + "\(SCREEN_SCALE)")
+        print("像素分辨率：" + "\(SCREEN_HEIGHT * SCREEN_SCALE)" + "*" + "\(SCREEN_WIDTH * SCREEN_SCALE)")
         //6、音频base64
-        let filePath = Bundle.main.path(forResource: "20230919093347", ofType: "wav") ?? ""
-        let fileData = filePath.toFileUrl?.base64FileData
-        print(fileData)
+//        let filePath = Bundle.main.path(forResource: "20230919093347", ofType: "wav") ?? ""
+//        let fileData = filePath.toFileUrl?.base64FileData
+//        print(fileData)
     }
     
     func stringToURL() {

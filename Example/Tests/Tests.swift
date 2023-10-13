@@ -18,6 +18,12 @@ class Tests: XCTestCase {
         XCTAssert(true, "Pass")
     }
     
+    func testDevice() {
+        print("\( UIDevice.modelName)")
+        print("宽度：" + "\(SCREEN_WIDTH)")
+        print("高度：" + "\(SCREEN_HEIGHT)")
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure() {

@@ -39,6 +39,10 @@ final class GGXSwiftExtension_ExampleTests: XCTestCase {
         print("状态栏高度\(StatusBarHeight)")
         print("底部安全域\(BOTTOM_MARGIN)")
         print("设备型号\(UIDevice.modelName)")
+        
+        print("宽度：" + "\(SCREEN_WIDTH)")
+        print("高度：" + "\(SCREEN_HEIGHT)")
+        print("缩放因子：" + "\(SCREEN_SCALE)")
     }
     
     func testJSONfileToStr() {
