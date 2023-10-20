@@ -29,6 +29,10 @@ class ViewController: UIViewController {
 //        let filePath = Bundle.main.path(forResource: "20230919093347", ofType: "wav") ?? ""
 //        let fileData = filePath.toFileUrl?.base64FileData
 //        print(fileData)
+        
+        let m = ""
+        print(m.isValidPhoneNumber())
+        
     }
     
     func testDevice(){

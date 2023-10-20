@@ -300,7 +300,7 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         } else if ((width == 414 && height == 896) || (width == 896 && height == 414)) && UIScreen.main.scale == 2 {
             return "Simulator iPhone XR"
         } else  if (width == 375 && height == 812) || (width == 812 && height == 375) {
-            return "Simulator iPhone X, iPhone XS"
+            return "Simulator iPhone X/XS/12 Mini/13 Mini"
         } else if (width == 414 && height == 736) || (width == 736 && height == 414) {
             return "Simulator iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8 Plus"
         } else if (width == 375 && height == 667) || (width == 667 && height == 375) {
@@ -311,8 +311,6 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
             return "Simulator iPhone 4, iPhone 4s, iPhone 2G, iPhone 3G, iPhone 3GS"
         } else if (width == 390 && height == 844) || (width == 844 && height == 390) {
             return "Simulator iPhone 12/12 Pro/13/13 Pro/14"
-        } else if (width == 360 && height == 780) || (width == 780 && height == 360) {
-            return "Simulator iPhone 12 Mini/13 Mini"
         } else if (width == 428 && height == 926) || (width == 926 && height == 428) {
             return "Simulator iPhone 12 Pro Max/13 Pro Max/14 Plus"
         } else if (width == 393 && height == 852) || (width == 852 && height == 393){
@@ -456,7 +454,7 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
     }
     
     static var width: Int {
-        return Int(UIScreen.main.bounds.size.width)
+        return Int(UIScreen.main.bounds.width)
     }
     
     static var height: Int {

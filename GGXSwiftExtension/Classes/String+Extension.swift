@@ -202,3 +202,16 @@ public extension String {
     }
 }
 
+extension String {
+    /// 核实合法手机号码
+    public func isValidPhoneNumber() -> Bool { self.verification(pattern: "^1\\d{10}$") }
+    
+    /// 验证字符串匹配结果是否符合要求，返回布尔值
+    fileprivate func verification(pattern: String) -> Bool { (self.matching(pattern: pattern)?.count ?? 0) > 0 }
+    
+    /// 获取匹配结果的数组
+    public func matching(pattern: String, options: NSRegularExpression.Options = .caseInsensitive) -> [NSTextCheckingResult]? {
+        let regex = try? NSRegularExpression(pattern: pattern, options: [])
+        return regex?.matches(in: self, options: NSRegularExpression.MatchingOptions.init(rawValue: 0), range: NSMakeRange(0, self.count))
+    }
+}
