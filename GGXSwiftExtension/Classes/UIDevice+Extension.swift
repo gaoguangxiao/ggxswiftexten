@@ -466,7 +466,7 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
     }
     
     /// 获取状态栏高度
-    fileprivate static var getStatusBarHeight: CGFloat {
+    @objc static var getStatusBarHeight: CGFloat {
         var statusH = UIApplication.shared.statusBarFrame.height
         if #available(iOS 13.0, *) {
             statusH = UIApplication.rootWindow?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
@@ -482,7 +482,7 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
     }
     
     //底部安全域
-    fileprivate static var getTouchBarHeight: CGFloat {
+    @objc static var getTouchBarHeight: CGFloat {
         var touchBarH: CGFloat = 0
         if #available(iOS 11.0, *) {
             touchBarH =
