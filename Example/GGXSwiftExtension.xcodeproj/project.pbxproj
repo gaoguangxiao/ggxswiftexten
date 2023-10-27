@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D15CFC0280D10890F396E85 /* Pods_GGXSwiftExtension_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE87E280BFFD0DDE8340E3FB /* Pods_GGXSwiftExtension_Example.framework */; };
+		1E4CA7B72AEB8C1700954CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CA7B62AEB8C1700954CA7 /* SceneDelegate.swift */; };
 		1E53CBB52ABD3D270075BC42 /* JSBridgeAPITest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */; };
 		1E61A2BB2AC52F9000914105 /* 20230919093347.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1E61A2BA2AC52F9000914105 /* 20230919093347.wav */; };
 		1E6E86902ABC3E1A0023552F /* 111.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E868F2ABC3E1A0023552F /* 111.mov */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		19EED5B6CE41C2CF4803C950 /* Pods-GGXSwiftExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_Tests/Pods-GGXSwiftExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1E28C238D8C64DC970A45EC4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1E4CA7B62AEB8C1700954CA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSBridgeAPITest.json; sourceTree = "<group>"; };
 		1E61A2BA2AC52F9000914105 /* 20230919093347.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 20230919093347.wav; sourceTree = "<group>"; };
 		1E6E868F2ABC3E1A0023552F /* 111.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 111.mov; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */,
 				1E6E868F2ABC3E1A0023552F /* 111.mov */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				1E4CA7B62AEB8C1700954CA7 /* SceneDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -371,6 +374,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				1E4CA7B72AEB8C1700954CA7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

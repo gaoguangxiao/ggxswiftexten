@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 //        UIApplication.rootWindow?.window
         
         //5、设备
-       testDevice()
+//       testDevice()
         //6、音频base64
 //        let filePath = Bundle.main.path(forResource: "20230919093347", ofType: "wav") ?? ""
 //        let fileData = filePath.toFileUrl?.base64FileData
@@ -33,6 +33,35 @@ class ViewController: UIViewController {
         let m = ""
         print(m.isValidPhoneNumber())
         
+        
+    }
+    
+    @IBAction func 转屏(_ sender: Any) {
+//        if #available(iOS 13.0, *) {
+//            print(UIApplication.windowScenes)
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//        //window
+//        if #available(iOS 15.0, *) {
+//            let window = UIApplication.windowScenes.first?.keyWindow
+//            print(window)
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//        let window2 = UIApplication.rootWindow
+//        
+//        print(window2)
+//    //        UIWindowScene
+        
+        if let app = UIApplication.shared.delegate as? AppDelegate {
+            if app.orientationMask == .landscapeRight{
+                app.orientationMask = .portrait
+            } else  {
+                app.orientationMask = .landscapeRight
+            }
+            self.p_switchOrientationWithLaunchScreen(orientation: app.orientationMask)
+        }
     }
     
     func testDevice(){
