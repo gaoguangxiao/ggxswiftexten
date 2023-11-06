@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.2.3'
-  s.summary          = 'UIViewController的扩展模拟器'
+  s.version          = '0.2.4'
+  s.summary          = '转移git仓库'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://gitee.com/gtools'
+  s.homepage         = 'https://github.com/gaoguangxiao'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '小修' => 'gaoguangxiao125@sina.com' }
-  s.source           = { :git => 'https://gitee.com/gtools/ggxswift-extension.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/gaoguangxiao/ggxswiftexten.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
