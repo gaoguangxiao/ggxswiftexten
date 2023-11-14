@@ -491,3 +491,11 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
         return touchBarH
     }
 }
+
+
+//设备适配
+extension UIDevice {
+    public static func deviceFactor(_ standardHeight: CGFloat = UIDevice.isIPad ? 768 : 414 ) -> CGFloat {
+        return SCREEN_WIDTH_STATIC/standardHeight
+    }
+}

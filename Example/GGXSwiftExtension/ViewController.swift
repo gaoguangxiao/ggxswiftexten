@@ -32,8 +32,7 @@ class ViewController: UIViewController {
         
         let m = ""
         print(m.isValidPhoneNumber())
-        
-        
+                
     }
     
     @IBAction func 转屏(_ sender: Any) {

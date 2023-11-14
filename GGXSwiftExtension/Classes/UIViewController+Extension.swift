@@ -24,7 +24,7 @@
 
 import Foundation
 
-extension UIViewController{
+public extension UIViewController{
     //当pushvc的时候对tabbar隐藏
     convenience init(nibName:String) {
         
