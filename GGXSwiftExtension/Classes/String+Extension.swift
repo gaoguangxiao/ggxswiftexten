@@ -202,16 +202,48 @@ public extension String {
     }
 }
 
-extension String {
+// MARK: 正则匹配
+public extension String {
+
+    /*
+     
+      https://www.jianshu.com/p/55d7c2d51d13
+     
+      ^  表示匹配字符串开始的位置（若干用在[]之外，则表示取反，表示不匹配括号中字符串）
+      $  表示匹配字符串的结束位置
+      [] 中括号表示 匹配括号中一个字符
+      {} 大括号表示 限定匹配次数，如{n}代表匹配n个字符，{n,}表示至少匹配n个字母，{n,m}至少n,最多m
+      \d 表示数字[0-9]，0-9的数字
+      \D 表示非数字
+     **/
+
+    
+    
+//    ^1[0-9]{10}$ 或者 ^1\\d{10}$
+
+    //匹配手机号
+    //在Swift5.0原始字符串使用字符串插值时，必须反斜杠使用#号。Swift4.2需要转义反斜杠
+    var isPhoneNunber: Bool {
+//        return self.verification(pattern: "^1\\d{10}$")
+        //swift5.0版本
+        return self.verification(pattern: #"^1\d{10}$"#)
+    }
     /// 核实合法手机号码
-    public func isValidPhoneNumber() -> Bool { self.verification(pattern: "^1\\d{10}$") }
+    func isValidPhoneNumber() -> Bool { self.verification(pattern: "^1\\d{10}$") }
     
     /// 验证字符串匹配结果是否符合要求，返回布尔值
-    fileprivate func verification(pattern: String) -> Bool { (self.matching(pattern: pattern)?.count ?? 0) > 0 }
+    func verification(pattern: String) -> Bool { (self.matching(pattern: pattern)?.count ?? 0) > 0 }
     
     /// 获取匹配结果的数组
-    public func matching(pattern: String, options: NSRegularExpression.Options = .caseInsensitive) -> [NSTextCheckingResult]? {
-        let regex = try? NSRegularExpression(pattern: pattern, options: [])
+    func matching(pattern: String, options: NSRegularExpression.Options = .caseInsensitive) -> [NSTextCheckingResult]? {
+        let regex = try? NSRegularExpression(pattern: pattern, options: options)
         return regex?.matches(in: self, options: NSRegularExpression.MatchingOptions.init(rawValue: 0), range: NSMakeRange(0, self.count))
     }
+    
+    /// 替换字符
+    func replace(pattern:String,replacement:String) -> String? {
+        let regex = try? NSRegularExpression(pattern: pattern, options: [])
+        return regex?.stringByReplacingMatches(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count), withTemplate: replacement)
+    }
+   
 }
