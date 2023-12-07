@@ -468,16 +468,24 @@ public func flatSpecificScale(_ value: CGFloat, _ scale: CGFloat) -> CGFloat {
     /// 获取状态栏高度
     @objc static var getStatusBarHeight: CGFloat {
         var statusH = UIApplication.shared.statusBarFrame.height
+        
+        guard let window = UIApplication.rootWindow else { return 0 }
+        var isLandscape = UIDevice.current.orientation.isLandscape
         if #available(iOS 13.0, *) {
-            statusH = UIApplication.rootWindow?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-        }
-        if statusH == 0 {
-            if #available(iOS 11.0, *) {
-                statusH = UIApplication.rootWindow?.safeAreaInsets.top ?? 20
-            } else {
-                statusH = 20
+            if let windowScene = window.windowScene {
+                isLandscape = windowScene.interfaceOrientation.isLandscape
             }
         }
+        if #available(iOS 11.0, *) {
+            statusH = if isLandscape {
+                window.safeAreaInsets.left
+            } else {
+                window.safeAreaInsets.top
+            }
+        }
+        
+        //状态栏最小高度为20
+        if statusH == 0 { statusH = 20 }
         return statusH
     }
     

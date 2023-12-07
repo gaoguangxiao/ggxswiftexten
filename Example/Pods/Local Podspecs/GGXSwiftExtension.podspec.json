@@ -1,6 +1,6 @@
 {
   "name": "GGXSwiftExtension",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "summary": "String中手机号判断",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/ggxswiftexten.git",
-    "tag": "0.2.6"
+    "tag": "0.2.7"
   },
   "platforms": {
     "ios": "10.0"

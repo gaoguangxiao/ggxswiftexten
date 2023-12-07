@@ -510,37 +510,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3B3D161A1F62489E9230A232DD51DF19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD51B1B1F908533998D4EB2E921DD989 /* GGXSwiftExtension.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension.modulemap";
-				PRODUCT_MODULE_NAME = GGXSwiftExtension;
-				PRODUCT_NAME = GGXSwiftExtension;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		79C25C5B5DC9A57D2EC4A7D6312775CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A6C33112A6A1E3B2F4E3038754FFC3D6 /* Pods-GGXSwiftExtension_Example.debug.xcconfig */;
@@ -670,6 +639,37 @@
 			};
 			name = Release;
 		};
+		A91C5C1831D69D48B5432C052D1F7561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD51B1B1F908533998D4EB2E921DD989 /* GGXSwiftExtension.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension.modulemap";
+				PRODUCT_MODULE_NAME = GGXSwiftExtension;
+				PRODUCT_NAME = GGXSwiftExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		CA8684D85B436A6870BD703E848D700F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D970545151703A10166C994719DD0D54 /* Pods-GGXSwiftExtension_ExampleTests.debug.xcconfig */;
@@ -703,6 +703,38 @@
 			};
 			name = Debug;
 		};
+		CB428B75DD9C73FDA83898BEA99B6F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB49F8E26095E13A9B1B395500992D36 /* GGXSwiftExtension.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension.modulemap";
+				PRODUCT_MODULE_NAME = GGXSwiftExtension;
+				PRODUCT_NAME = GGXSwiftExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		CDB488C09994AFCEADA54A82FFB82412 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9271E0F7FB0FDD210D73C5EE4378D97F /* Pods-GGXSwiftExtension_Example.release.xcconfig */;
@@ -730,38 +762,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D0153309B29F89BEB4E69CF7775257B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB49F8E26095E13A9B1B395500992D36 /* GGXSwiftExtension.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GGXSwiftExtension/GGXSwiftExtension.modulemap";
-				PRODUCT_MODULE_NAME = GGXSwiftExtension;
-				PRODUCT_NAME = GGXSwiftExtension;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -841,8 +841,8 @@
 		3172BEB221EEC9978D0993073A4F1E1F /* Build configuration list for PBXNativeTarget "GGXSwiftExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B3D161A1F62489E9230A232DD51DF19 /* Debug */,
-				D0153309B29F89BEB4E69CF7775257B1 /* Release */,
+				A91C5C1831D69D48B5432C052D1F7561 /* Debug */,
+				CB428B75DD9C73FDA83898BEA99B6F69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
