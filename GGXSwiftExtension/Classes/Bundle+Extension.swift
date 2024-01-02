@@ -33,4 +33,14 @@ public extension Bundle {
         }
     }
     
+    static func jsonfileTojson(_ name:String, type: String?) -> Data? {
+        //将JSON文件 读取并输出为字符串
+        let filePath = Bundle.main.path(forResource: name, ofType: type)
+        guard let uurl = filePath?.toFileUrl else {
+            print("URL为空")
+            return nil
+        }
+        //将文件数据转化为Data
+        return try? Data(contentsOf: uurl)
+    }
 }
