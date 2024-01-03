@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
   s.version          = '0.3.2'
-  s.summary          = '仅仅更新tag-1'
+  s.summary          = '仅仅更新tag-2'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
