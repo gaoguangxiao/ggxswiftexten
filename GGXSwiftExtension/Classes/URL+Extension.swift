@@ -32,6 +32,25 @@ public extension URL {
         }
     }
 
+    var contentFileData: Data? {
+        do {
+            return try Data(contentsOf: self)
+        } catch let e {
+            print("报错信息：\(e)")
+            return nil
+        }
+    }
+    
+    var filejsonData: Any? {
+        do {
+            guard let data = self.contentFileData else { return nil }
+            return try JSONSerialization.jsonObject(with: data)
+        } catch let e{
+            print("报错信息：\(e)")
+            return nil
+        }
+    }
+    
     ///  按照原顺序 取出Get请求中的参数，结果是一个大字典
     /// - Returns:结果是一个数组，每个元素是一个字典，（可以有序）
     func getParametersWithOrder() -> [[String: String]] {
