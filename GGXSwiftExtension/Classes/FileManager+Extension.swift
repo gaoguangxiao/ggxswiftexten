@@ -181,9 +181,8 @@ extension  FileManager {
                     // 如果被移动的件夹或者文件，如果已存在，先删除，否则拷贝不了
                     do {
                         try fileManagerDefault.removeItem(atPath: toFilePath)
-                        block?(true)
                     } catch _ {
-                        block?(false)
+
                     }
                 }
                 
