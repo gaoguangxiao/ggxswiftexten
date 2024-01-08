@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.3.5'
-  s.summary          = 'FileManager对移动复制文件-block一次'
+  s.version          = '0.3.6'
+  s.summary          = 'Log扩展可打印时间调用'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

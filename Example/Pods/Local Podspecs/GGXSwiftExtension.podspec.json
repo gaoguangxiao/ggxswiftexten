@@ -1,7 +1,7 @@
 {
   "name": "GGXSwiftExtension",
-  "version": "0.3.3",
-  "summary": "UserDefaults对keys属性包装",
+  "version": "0.3.6",
+  "summary": "Log扩展可打印时间调用",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/ggxswiftexten.git",
-    "tag": "0.3.3"
+    "tag": "0.3.6"
   },
   "platforms": {
     "ios": "10.0"
