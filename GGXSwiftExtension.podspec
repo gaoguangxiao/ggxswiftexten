@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.3.6'
-  s.summary          = 'Log扩展可打印时间调用'
+  s.version          = '0.3.7'
+  s.summary          = 'FileManager扩展可获取文件目录下所有文件相对路径'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
