@@ -1,5 +1,5 @@
 PODS:
-  - GGXSwiftExtension (0.3.6)
+  - GGXSwiftExtension (0.3.8)
 
 DEPENDENCIES:
   - GGXSwiftExtension (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGXSwiftExtension: 9c5df357b3a95b3ce90e53a19a2212484194a430
+  GGXSwiftExtension: 0773d7981d081d153426b44fe149122f679733d0
 
 PODFILE CHECKSUM: 1bcdbbff5a8d577c473cd1f5cc9a7695a24438e1
 

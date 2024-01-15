@@ -13,6 +13,8 @@
 		1E61A2BB2AC52F9000914105 /* 20230919093347.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1E61A2BA2AC52F9000914105 /* 20230919093347.wav */; };
 		1E6E86902ABC3E1A0023552F /* 111.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E868F2ABC3E1A0023552F /* 111.mov */; };
 		1E8494822ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8494812ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift */; };
+		1E87914C2B4FEA0B00221160 /* a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E87914B2B4FEA0B00221160 /* a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3 */; };
+		1E87914E2B4FEB5000221160 /* lanlongbabu_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E87914D2B4FEB5000221160 /* lanlongbabu_2.png */; };
 		1F3BDA947307EBE598B39722 /* Pods_GGXSwiftExtension_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1166E6F1603AAC90169954D /* Pods_GGXSwiftExtension_ExampleTests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 		1E6E868F2ABC3E1A0023552F /* 111.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 111.mov; sourceTree = "<group>"; };
 		1E84947F2ABD944A00356356 /* GGXSwiftExtension_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGXSwiftExtension_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8494812ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGXSwiftExtension_ExampleTests.swift; sourceTree = "<group>"; };
+		1E87914B2B4FEA0B00221160 /* a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3"; sourceTree = "<group>"; };
+		1E87914D2B4FEB5000221160 /* lanlongbabu_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lanlongbabu_2.png; sourceTree = "<group>"; };
 		27F83DE6B78AF09AD32842F3 /* Pods-GGXSwiftExtension_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_ExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_ExampleTests/Pods-GGXSwiftExtension_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4993E3D7E3C8150F94D46E45 /* Pods-GGXSwiftExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGXSwiftExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-GGXSwiftExtension_Example/Pods-GGXSwiftExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GGXSwiftExtension_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGXSwiftExtension_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +131,8 @@
 		607FACD21AFB9204008FA782 /* Example for GGXSwiftExtension */ = {
 			isa = PBXGroup;
 			children = (
+				1E87914D2B4FEB5000221160 /* lanlongbabu_2.png */,
+				1E87914B2B4FEA0B00221160 /* a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3 */,
 				1E61A2BA2AC52F9000914105 /* 20230919093347.wav */,
 				1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */,
 				1E6E868F2ABC3E1A0023552F /* 111.mov */,
@@ -285,10 +291,12 @@
 			files = (
 				1E61A2BB2AC52F9000914105 /* 20230919093347.wav in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				1E87914E2B4FEB5000221160 /* lanlongbabu_2.png in Resources */,
 				1E53CBB52ABD3D270075BC42 /* JSBridgeAPITest.json in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				1E6E86902ABC3E1A0023552F /* 111.mov in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				1E87914C2B4FEA0B00221160 /* a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

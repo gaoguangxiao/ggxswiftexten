@@ -31,7 +31,12 @@ class ViewController: UIViewController {
 //        if let fileData {
 //            print(fileData)
 //        }
-    
+        
+        //7、文件MD5
+        let filePath = Bundle.main.path(forResource: "lanlongbabu_2", ofType: "png") ?? ""
+        let fileMD5 = filePath.toFileUrl?.toMD5()
+        print(fileMD5)
+
     }
     
     @IBAction func 正则判断(_ sender: Any) {

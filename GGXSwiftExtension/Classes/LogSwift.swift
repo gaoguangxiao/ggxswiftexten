@@ -78,7 +78,7 @@ public class LogSwift: NSObject {
 
 public func LogInfo<T>( _ message: T, file: String = #file, method: String = #function, line: Int = #line){
     #if DEBUG
-    print("日志开始----\n日期：\(Date.getCurrentDateStr("yyyy-MM-dd HH:mm:ss SSS")) \n文件：\((file as NSString).lastPathComponent)[\(line)], \(method): \n信息：\(message)\n--日志结束")
+    print("\n日期：\(Date.getCurrentDateStr("yyyy-MM-dd HH:mm:ss SSS"))\n信息：\(message)")
     #endif
 }
 
