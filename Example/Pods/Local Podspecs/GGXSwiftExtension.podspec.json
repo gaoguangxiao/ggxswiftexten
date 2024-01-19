@@ -1,7 +1,7 @@
 {
   "name": "GGXSwiftExtension",
-  "version": "0.3.8",
-  "summary": "本地文件MD5",
+  "version": "0.3.0",
+  "summary": "String的后缀拼接",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/ggxswiftexten.git",
-    "tag": "0.3.8"
+    "tag": "0.3.0"
   },
   "platforms": {
     "ios": "10.0"

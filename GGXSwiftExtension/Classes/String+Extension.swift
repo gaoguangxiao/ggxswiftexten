@@ -183,6 +183,51 @@ public extension String {
             return url.path
         }
     }
+    
+    func getMIMETypeFromPathExtension() -> String {
+        var MIMEType = "text/html"
+        let pathExtension = self.pathExtension
+        if pathExtension == "html" {
+            MIMEType = "text/html"
+        } else if pathExtension == "js"{
+            MIMEType = "application/javascript";
+        } else if pathExtension == "css"{
+            MIMEType = "text/css";
+        } else if pathExtension == "png"{
+            MIMEType = "image/png"
+        } else if pathExtension == "jpg"{
+            MIMEType = "image/jpg"
+        } else if pathExtension == "jpeg"{
+            MIMEType = "image/jpeg"
+        } else if pathExtension == "json"{
+            MIMEType = "application/json"
+        } else if pathExtension == "xml"{
+            MIMEType = "application/xml"
+        } else if pathExtension == "pdf"{
+            MIMEType = "application/pdf"
+        } else if pathExtension == "webp"{
+            MIMEType = "image/webp"
+        } else if pathExtension == "gif"{
+            MIMEType = "application/gif"
+        } else if pathExtension == "mp3"{
+            MIMEType = "audio/mpeg"
+        } else if pathExtension == "mp4"{
+            MIMEType = "video/mp4"
+        } else if pathExtension == "wav"{
+            MIMEType = "audio/wav"
+        } else if pathExtension == "ico"{
+            MIMEType = "image/x-icon"
+        } else if pathExtension == "svg"{
+            MIMEType = "image/svg+xml"
+        } else if pathExtension == "ttf"{
+            MIMEType = "font/ttf"
+        } else if pathExtension == "woff"{
+            MIMEType = "font/woff"
+        } else if pathExtension == "woff2"{
+            MIMEType = "font/woff2"
+        }
+        return MIMEType;
+    }
 }
 
 // MARK: Function of NSString
