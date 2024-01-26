@@ -1,7 +1,7 @@
 {
   "name": "GGXSwiftExtension",
-  "version": "0.3.9",
-  "summary": "String的后缀拼接",
+  "version": "0.4.1",
+  "summary": "String的匹配包含忽略option增加",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/ggxswiftexten.git",
-    "tag": "0.3.9"
+    "tag": "0.4.1"
   },
   "platforms": {
     "ios": "10.0"
