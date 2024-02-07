@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.4.2'
-  s.summary          = 'String的随机字符串'
+  s.version          = '0.4.3'
+  s.summary          = '增加图片base64转UIImage'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

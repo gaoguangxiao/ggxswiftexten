@@ -356,3 +356,31 @@ public extension String {
     }
    
 }
+
+//MARK: 图片base64
+public extension String {
+    /// 图片base64转Data数据
+    ///
+    var base64Image: UIImage? {
+        if let base64Data = convertImageBase64ToImageData(imageBase64Str: self){
+            return UIImage.init(data: base64Data)!
+        }
+        return nil
+    }
+    
+    func convertImageBase64ToImageData(imageBase64Str: String) -> Data? {
+        var base64String = imageBase64Str
+
+        if base64String.hasPrefix("data:image") {
+            guard let newBase64String = base64String.components(separatedBy: ",").last else {
+                return nil
+            }
+            base64String = newBase64String
+        }
+        guard let decodedData = Data(base64Encoded: base64String, options: .ignoreUnknownCharacters) else {
+            return nil
+        }
+        return decodedData
+    }
+    
+}
