@@ -157,6 +157,7 @@ public extension String {
 
 // MARK: - URL Encode & Decode
 public extension String {
+        
     var toUrl: URL? {
         if let url = URL.init(string: self) {
             return url
@@ -170,11 +171,17 @@ public extension String {
     
     var toFileUrl: URL? {
         var url : URL?
+        
+        let charSet = CharacterSet.urlQueryAllowed as NSCharacterSet
+        let mutSet = charSet.mutableCopy() as! NSMutableCharacterSet
+        mutSet.addCharacters(in: "#")
+        let result = self.addingPercentEncoding(withAllowedCharacters: mutSet as CharacterSet)
+        
         if #available(iOS 16.0, *) {
-            url = URL(filePath: self)
+            url = URL(filePath: result ?? "" )
         } else {
             // Fallback on earlier versions
-            url = URL(fileURLWithPath: self)
+            url = URL(fileURLWithPath: result ?? "")
         }
         return url
     }
@@ -348,6 +355,13 @@ public extension String {
         let regex = try? NSRegularExpression(pattern: pattern, options: options)
         return regex?.matches(in: self, options: NSRegularExpression.MatchingOptions.init(rawValue: 0), range: NSMakeRange(0, self.count))
     }
+    
+//    func replaceNonEnglishCharactersWithSpaces(text: String) -> String {
+//        let nonEnglishCharactersRange = NSMakeRange(0, text.utf16.count)
+//        let regex = try! NSRegularExpression(pattern: "[^a-zA-Z]", options: [])
+//        let modifiedString = regex.stringByReplacingMatches(in: text, options: [], range: nonEnglishCharactersRange, withTemplate: " ")
+//        return modifiedString
+//    }
     
     /// 替换字符
     func replace(pattern:String,replacement:String) -> String? {
