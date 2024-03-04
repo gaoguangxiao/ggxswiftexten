@@ -1,7 +1,7 @@
 {
   "name": "GGXSwiftExtension",
-  "version": "0.4.1",
-  "summary": "String的匹配包含忽略option增加",
+  "version": "0.4.6",
+  "summary": "Color颜色透明度设置",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,10 +13,12 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/ggxswiftexten.git",
-    "tag": "0.4.1"
+    "tag": "0.4.6"
   },
+  "swift_versions": "5.0",
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "GGXSwiftExtension/Classes/**/*"
+  "source_files": "GGXSwiftExtension/Classes/**/*",
+  "swift_version": "5.0"
 }

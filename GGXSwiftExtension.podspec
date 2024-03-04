@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.4.6'
+  s.version          = '0.4.7'
   s.summary          = 'Color颜色透明度设置'
 
 # This description is used to generate tags and improve search results.
@@ -28,6 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/gaoguangxiao/ggxswiftexten.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
+  s.swift_version = '5.0'
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'GGXSwiftExtension/Classes/**/*'
