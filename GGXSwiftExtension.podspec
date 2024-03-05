@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.4.7'
-  s.summary          = 'Color颜色透明度设置'
+  s.version          = '0.4.8'
+  s.summary          = 'UIIamge基于字符串生成二维码，可设置logo'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

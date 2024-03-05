@@ -468,9 +468,60 @@ public extension UIImage {
 }
 
 //qrcode
+
+public class QRCreateModel {
+    
+    /// 文本
+    public var text: String?
+    
+    /// 二维码中间的logo
+    public var logo: String?
+    
+    /// 二维码缩放倍数{27*scale,27*scale}
+    public var scale: Float = 10
+    
+    /// 二维码背景颜色
+    public var backgroundColor: UIColor = UIColor.white
+    
+    /// 二维码颜色
+    public var contentColor: UIColor = UIColor.black
+    
+    public init(text: String, logo: String? = nil, scale: Float = 10, backgroundColor: UIColor = .white, contentColor: UIColor = .black) {
+        self.text = text
+        self.logo = logo
+        self.scale = scale
+        self.backgroundColor = backgroundColor
+        self.contentColor = contentColor
+    }
+}
+
 public extension UIImage {
     
-    static func createQRCode(qrCode:String, szie: CGSize) -> UIImage? {
+    private static func addLogo(ciImage: CIImage, model: QRCreateModel) -> UIImage? {
+        
+        guard let _ = model.logo,
+              let logoImage = UIImage(named: model.logo!) else {
+            
+            return nil
+        }
+        
+        let image = UIImage(ciImage: ciImage)
+        let originX = (image.size.width - logoImage.size.width)/2.0
+        let originY = (image.size.height - logoImage.size.height)/2.0
+        
+        UIGraphicsBeginImageContext(image.size)
+        image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        logoImage.draw(in: CGRect(x: originX, y: originY, width: logoImage.size.width, height: logoImage.size.height))
+        
+        let outPutImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return outPutImage
+    }
+    
+    static func createQRCode(model: QRCreateModel) -> UIImage? {
+        
+        guard let qrCode = model.text else { return nil }
         
         guard let data = qrCode.data(using: .utf8) else { return nil }
         
@@ -485,11 +536,17 @@ public extension UIImage {
         // 获取生成的二维码图像
         if let outputImage = filter?.outputImage?.transformed(by: transformed) {
             // 将图像转换为可显示的 CGImage
+            
             if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
                 // 创建 UIImage 并显示
                 let qrCodeImage = UIImage(cgImage: cgImage)
-                //
-                return qrCodeImage
+                
+                guard let qrImageWithLogo = addLogo(ciImage: outputImage, model: model) else {
+
+                    return qrCodeImage
+                }
+  
+                return qrImageWithLogo
             }
         }
         return nil

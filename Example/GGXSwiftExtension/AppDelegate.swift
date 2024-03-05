@@ -7,8 +7,35 @@
 //
 
 import UIKit
+import SwiftUI
 
-@UIApplicationMain
+@main
+struct AppOld {
+    static func main() {
+        if #available(iOS 14.0, *) {
+            //启动之前设置配置
+            AppNew.main()
+        } else {
+            UIApplicationMain(
+                CommandLine.argc,
+                CommandLine.unsafeArgv,
+                nil,
+                NSStringFromClass(AppDelegate.self))
+        }
+    }
+}
+
+
+@available(iOS 14.0, *)
+struct AppNew: App {
+    var body: some Scene {
+        WindowGroup {
+            SwiftUIQRCodeView()
+        }
+    }
+}
+
+//@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
