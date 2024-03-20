@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGXSwiftExtension: 0379bada1d373fcdeb8324ae4271f0dba58ffca3
+  GGXSwiftExtension: 8ecdc5edf901e727b08402562af436d80337dead
 
 PODFILE CHECKSUM: 1bcdbbff5a8d577c473cd1f5cc9a7695a24438e1
 

@@ -118,7 +118,14 @@ class ViewController: UIViewController {
         print("底部安全域\(BOTTOM_MARGIN)")
         print("设备型号\(UIDevice.modelName)")
         
+        var isPhoneX = false
+        let size = UIScreen.main.bounds.size// [UIScreen mainScreen].bounds.size;\
+        let notchValue = size.width / size.height * 100;
+        if notchValue == 216 || notchValue == 46 {
+            isPhoneX = true
+        }
         
+        print("isIPhone: \(isPhoneX)")
     }
     
     

@@ -15,6 +15,9 @@ struct AppOld {
         if #available(iOS 14.0, *) {
             //启动之前设置配置
             AppNew.main()
+            
+            
+            
         } else {
             UIApplicationMain(
                 CommandLine.argc,

@@ -17,12 +17,33 @@ struct SwiftUIQRCodeView: View {
     @State var qrCodeImage: UIImage = (UIImage.createQRCode(model: QRCreateModel(text: "This is a qrcode",logo: "appLogo")) ?? UIImage())
     
     var body: some View {
+        
+        VStack {
+            Text("qrcode")
 
-        Text("qrcode")
-
-        Image(uiImage: qrCodeImage)
+            Image(uiImage: qrCodeImage)
+            
+            Button(action: {
+                isho()
+            }, label: {
+                Text("isphone")
+            })
+        }
+        
     }
     
+    func isho() {
+        var isPhoneX = false
+        let size = UIScreen.main.bounds.size// [UIScreen mainScreen].bounds.size;\
+        let notchValue = size.width / size.height * 100;
+        if notchValue == 216 || notchValue == 46 {
+            isPhoneX = true
+        }
+        
+        print("notchValue: \(notchValue)")
+        
+        print("isIPhone: \(isPhoneX)")
+    }
 }
 
 @available(iOS 13.0, *)
