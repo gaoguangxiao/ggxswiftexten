@@ -44,12 +44,12 @@ import UIKit
         var window: UIWindow?
         if #available(iOS 13.0, *) {
             outer: for s in windowScenes {
-                for w in s.windows where w.isMember(of: UIWindow.self) {
+                for w in s.windows where (w.isMember(of: UIWindow.self) && w.isKeyWindow) {
                     window = w
                     break outer
                 }
             }
         }
-        return window ?? UIApplication.shared.windows.first
+        return window ?? UIApplication.shared.keyWindow
     }
 }

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.5.0'
-  s.summary          = '支持iOS9。0系统'
+  s.version          = '0.5.1'
+  s.summary          = '修改keywindow的获取方式'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

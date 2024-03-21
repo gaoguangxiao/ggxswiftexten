@@ -44,6 +44,8 @@ struct SwiftUIQRCodeView: View {
         
         print("isIPhone: \(isPhoneX)")
     }
+    
+    
 }
 
 @available(iOS 13.0, *)
