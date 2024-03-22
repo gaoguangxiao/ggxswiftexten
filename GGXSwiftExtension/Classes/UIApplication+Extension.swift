@@ -50,6 +50,6 @@ import UIKit
                 }
             }
         }
-        return window ?? UIApplication.shared.keyWindow
+        return window ?? UIApplication.shared.windows.first
     }
 }
