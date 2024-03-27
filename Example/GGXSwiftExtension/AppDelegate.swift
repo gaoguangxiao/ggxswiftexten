@@ -9,36 +9,34 @@
 import UIKit
 import SwiftUI
 
-@main
-struct AppOld {
-    static func main() {
-        if #available(iOS 14.0, *) {
-            //启动之前设置配置
-            AppNew.main()
-            
-            
-            
-        } else {
-            UIApplicationMain(
-                CommandLine.argc,
-                CommandLine.unsafeArgv,
-                nil,
-                NSStringFromClass(AppDelegate.self))
-        }
-    }
-}
+//@main
+//struct AppOld {
+//    static func main() {
+//        if #available(iOS 14.0, *) {
+//            //启动之前设置配置
+//            AppNew.main()
+//            
+//        } else {
+//            UIApplicationMain(
+//                CommandLine.argc,
+//                CommandLine.unsafeArgv,
+//                nil,
+//                NSStringFromClass(AppDelegate.self))
+//        }
+//    }
+//}
 
 
-@available(iOS 14.0, *)
-struct AppNew: App {
-    var body: some Scene {
-        WindowGroup {
-            SwiftUIQRCodeView()
-        }
-    }
-}
+//@available(iOS 14.0, *)
+//struct AppNew: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            SwiftUIQRCodeView()
+//        }
+//    }
+//}
 
-//@UIApplicationMain
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -47,6 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        let homepageVc = ViewController()
+//        let nav = UINavigationController(rootViewController: homepageVc)
+//        nav.setNavigationBarHidden(true, animated: true)
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = nav
+//        self.window?.makeKeyAndVisible()
+        
         return true
     }
     
