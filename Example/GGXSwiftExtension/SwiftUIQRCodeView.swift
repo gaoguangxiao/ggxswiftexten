@@ -31,9 +31,13 @@ struct SwiftUIQRCodeView: View {
             }, label: {
                 Text("UIApplication")
             })
+            
+        
         }
         
     }
+    
+    
     
     func testApplication () {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
@@ -65,4 +69,30 @@ struct SwiftUIQRCodeView: View {
 @available(iOS 13.0, *)
 #Preview {
     SwiftUIQRCodeView()
+}
+ 
+extension String {
+    mutating func addingEachRow() {
+        var rows = self.components(separatedBy: .newlines)
+        let header = rows.first?.csvEncoded()
+        if let header = header {
+            rows.insert(header, at: 0)
+        }
+        self = rows.joined(separator: "\n")
+    }
+    
+    func csvEncoded() -> String {
+        let doubleQuoteSet = CharacterSet(charactersIn: "\"")
+        let commaSet = CharacterSet(charactersIn: ",")
+        let newLineSet = CharacterSet(charactersIn: "\n")
+        
+        var output = self
+            .replacingOccurrences(of: "\"", with: "\"\"")
+            .replacingOccurrences(of: ",", with: ",\",\"")
+        
+        if output.rangeOfCharacter(from: doubleQuoteSet.union(commaSet).union(newLineSet)) != nil {
+            output = "\"\(output)\""
+        }
+        return output
+    }
 }
