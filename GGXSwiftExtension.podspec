@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.5.5'
-  s.summary          = '增加NSBundle的Objc访问'
+  s.version          = '0.5.6'
+  s.summary          = '兼容iOS13下横竖屏'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
