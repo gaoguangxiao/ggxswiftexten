@@ -47,7 +47,7 @@ struct SwiftUIQRCodeView: View {
     func testDevice(){
         print("物理尺寸：" + "\(SCREEN_WIDTH)" + "*" + "\(SCREEN_HEIGHT)")
         print("缩放因子：" + "\(SCREEN_SCALE)")
-        print("像素分辨率：" + "\(SCREEN_HEIGHT * SCREEN_SCALE)" + "*" + "\(SCREEN_WIDTH * SCREEN_SCALE)")
+        print("像素分辨率：" + "\(SCREEN_WIDTH * SCREEN_SCALE)" + "*" + "\(SCREEN_HEIGHT * SCREEN_SCALE)")
         
         print("导航栏高度\(TopBarHeight)")
         print("状态栏高度\(StatusBarHeight)")

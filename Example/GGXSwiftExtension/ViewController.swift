@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         //        UIApplication.rootWindow?.window
         
         //5、设备
-        //       testDevice()
+               testDevice()
         //6、音频base64 if let 速记可将可选性展开同名的阴影变量
 //        let filePath = Bundle.main.path(forResource: "20230919093347", ofType: "wav") ?? ""
 //        let fileData = filePath.toFileUrl
