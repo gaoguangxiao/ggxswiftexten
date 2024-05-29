@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.5.7'
-  s.summary          = '增加iPad机型、音频数据返空'
+  s.version          = '0.5.8'
+  s.summary          = '音频数据返空，base64字符判断'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
