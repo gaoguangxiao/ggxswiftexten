@@ -1,7 +1,7 @@
 {
   "name": "GGXSwiftExtension",
-  "version": "0.4.9",
-  "summary": "dictionary的编码扩展",
+  "version": "0.5.8",
+  "summary": "音频数据返空，base64字符判断",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/ggxswiftexten.git",
-    "tag": "0.4.9"
+    "tag": "0.5.8"
   },
   "swift_versions": "5.0",
   "platforms": {

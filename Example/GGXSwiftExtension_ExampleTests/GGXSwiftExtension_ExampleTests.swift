@@ -43,11 +43,24 @@ final class GGXSwiftExtension_ExampleTests: XCTestCase {
         print("宽度：" + "\(SCREEN_WIDTH)")
         print("高度：" + "\(SCREEN_HEIGHT)")
         print("缩放因子：" + "\(SCREEN_SCALE)")
+        
+        
+//        XCTAssertEqual(Equatable, <#T##expression2: Equatable##Equatable#>)
     }
     
     func testJSONfileToStr() {
         let d = Bundle.jsonfileTojson("JSBridgeAPITest")
         print(d)
+    }
+    
+    func testArrayRemove() {
+        
+        var array = ["1","2","3","4"]
+        
+        array.removeElement(item: "1", from: &array)
+        
+        XCTAssertEqual(array, ["2","3","4"])
+        
     }
 
 }

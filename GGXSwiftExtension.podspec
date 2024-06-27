@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.5.8'
-  s.summary          = '音频数据返空，base64字符判断'
+  s.version          = '0.5.9'
+  s.summary          = 'AVAudioSession扩展'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,7 +29,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.swift_version = '5.0'
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'GGXSwiftExtension/Classes/**/*'
   
