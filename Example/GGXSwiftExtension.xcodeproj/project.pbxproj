@@ -13,6 +13,7 @@
 		1E56A4042B96BF0600386E72 /* SwiftUIQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E56A4032B96BF0600386E72 /* SwiftUIQRCodeView.swift */; };
 		1E61A2BB2AC52F9000914105 /* 20230919093347.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1E61A2BA2AC52F9000914105 /* 20230919093347.wav */; };
 		1E6E86902ABC3E1A0023552F /* 111.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E868F2ABC3E1A0023552F /* 111.mov */; };
+		1E7C1EF32C3B8BD800445F95 /* a9656f6b-df60-403a-977e-8962c2177544.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C1EF22C3B8BD800445F95 /* a9656f6b-df60-403a-977e-8962c2177544.mp3 */; };
 		1E8494822ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8494812ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift */; };
 		1E87914C2B4FEA0B00221160 /* a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E87914B2B4FEA0B00221160 /* a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3 */; };
 		1E87914E2B4FEB5000221160 /* lanlongbabu_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E87914D2B4FEB5000221160 /* lanlongbabu_2.png */; };
@@ -41,6 +42,7 @@
 		1E56A4032B96BF0600386E72 /* SwiftUIQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIQRCodeView.swift; sourceTree = "<group>"; };
 		1E61A2BA2AC52F9000914105 /* 20230919093347.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 20230919093347.wav; sourceTree = "<group>"; };
 		1E6E868F2ABC3E1A0023552F /* 111.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 111.mov; sourceTree = "<group>"; };
+		1E7C1EF22C3B8BD800445F95 /* a9656f6b-df60-403a-977e-8962c2177544.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "a9656f6b-df60-403a-977e-8962c2177544.mp3"; sourceTree = "<group>"; };
 		1E84947F2ABD944A00356356 /* GGXSwiftExtension_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGXSwiftExtension_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8494812ABD944A00356356 /* GGXSwiftExtension_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGXSwiftExtension_ExampleTests.swift; sourceTree = "<group>"; };
 		1E87914B2B4FEA0B00221160 /* a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				1E87914D2B4FEB5000221160 /* lanlongbabu_2.png */,
 				1E87914B2B4FEA0B00221160 /* a6d77380-72b8-452f-aa27-7554b99d0dfb.mp3 */,
+				1E7C1EF22C3B8BD800445F95 /* a9656f6b-df60-403a-977e-8962c2177544.mp3 */,
 				1E61A2BA2AC52F9000914105 /* 20230919093347.wav */,
 				1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */,
 				1E6E868F2ABC3E1A0023552F /* 111.mov */,
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E61A2BB2AC52F9000914105 /* 20230919093347.wav in Resources */,
+				1E7C1EF32C3B8BD800445F95 /* a9656f6b-df60-403a-977e-8962c2177544.mp3 in Resources */,
 				1E87914E2B4FEB5000221160 /* lanlongbabu_2.png in Resources */,
 				1E53CBB52ABD3D270075BC42 /* JSBridgeAPITest.json in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
@@ -410,7 +414,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -446,7 +450,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
@@ -565,7 +569,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M6KU4P4925;
 				INFOPLIST_FILE = GGXSwiftExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -585,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M6KU4P4925;
 				INFOPLIST_FILE = GGXSwiftExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

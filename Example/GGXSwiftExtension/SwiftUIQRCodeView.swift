@@ -32,12 +32,21 @@ struct SwiftUIQRCodeView: View {
                 Text("UIApplication")
             })
             
-        
+            Button {
+                testAudioFileMd5()
+            } label: {
+                Text("音频文件MD5")
+            }
+
         }
         
     }
     
-    
+    func testAudioFileMd5() {
+        let path = Bundle.main.url(forResource: "a9656f6b-df60-403a-977e-8962c2177544", withExtension: "mp3");
+//        path?.toMD5()
+        print("\(path?.toMD5())")
+    }
     
     func testApplication () {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene

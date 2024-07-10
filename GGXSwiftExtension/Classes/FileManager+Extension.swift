@@ -18,7 +18,7 @@ extension FileManager {
         case directory
     }
     
-     /// 移动类型
+    /// 移动类型
     public enum MoveFileType {
         case move
         case copy
@@ -27,7 +27,7 @@ extension FileManager {
 
 
 public extension FileManager {
-
+    
     /**
      * 计算单个文件的大小
      */
@@ -44,7 +44,7 @@ public extension FileManager {
         }
         return fileSize/1024/1024
     }
-
+    
     /**
      * 遍历所有子目录， 并计算文件大小
      */
@@ -174,7 +174,7 @@ extension  FileManager {
             let toFileFolderPath = directory(atPath: toFilePath)
             if !isFileExists(atPath: toFilePath) && fileType == .file ?
                 !createFile(atPath: toFilePath) :
-                !createFolder(atPath: toFileFolderPath)  {
+                    !createFolder(atPath: toFileFolderPath)  {
                 block?(false)
             } else {
                 if isOverwrite && isFileExists(atPath: toFilePath) {
@@ -182,7 +182,7 @@ extension  FileManager {
                     do {
                         try fileManagerDefault.removeItem(atPath: toFilePath)
                     } catch _ {
-
+                        
                     }
                 }
                 
@@ -205,7 +205,7 @@ extension  FileManager {
     public static func isFileExists(atPath path: String) -> Bool {
         fileManagerDefault.fileExists(atPath: path)
     }
-
+    
     /// 获取 (文件夹/文件) 的前一个路径
     public static func directory(atPath path: String) -> String {
         (path as NSString).deletingLastPathComponent
@@ -218,12 +218,12 @@ extension  FileManager {
     
     /// 获取所有文件路径
     public static func getAllFiles(atPath folderPath: String) -> [Any]? {
-         // 查看文件夹是否存在，如果存在就直接读取，不存在就直接反空
-         if isFileExists(atPath: folderPath) {
+        // 查看文件夹是否存在，如果存在就直接读取，不存在就直接反空
+        if isFileExists(atPath: folderPath) {
             return fileManagerDefault.enumerator(atPath: folderPath)?.allObjects
-         }
-         return nil
-     }
+        }
+        return nil
+    }
     
     /// 获取所有文件名（性能要比getAllFiles差一些）
     public static func getAllFileNames(atPath folderPath: String) -> [String]? {
@@ -242,7 +242,7 @@ extension  FileManager {
         return files.map {
             folderPath + "/"+"\($0)"
         }
-     }
+    }
     
     /// 计算单个文件的大小
     public static func fileSize(atPath path: String) -> Double {
