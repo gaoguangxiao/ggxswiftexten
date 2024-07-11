@@ -265,3 +265,58 @@ extension  FileManager {
     }
     
 }
+
+extension FileManager {
+    
+    /// 其path为相对path，默认
+    public static func deleteFileByPath(_ path: String? = nil, _ folderName: String? = nil) {
+        if let path {
+            let fileAtPath = self.filePath(folder: folderName, path: path, fileExt: "wav")
+            if FileManager.isFileExists(atPath: fileAtPath) {
+                FileManager.removefile(atPath: fileAtPath)
+            }
+        } else {
+            let folderPath = getSynthesisfolderPath(folder: folderName)
+            FileManager.removefolder(atPath: folderPath)
+        }
+    }
+    
+    /// 构建目录
+    public static func create(_ systemFolder: String? = nil,
+                       folder: String? = nil,
+                       path: String, 
+                       fileExt: String) -> String {
+        let resourceFolder = getSynthesisfolderPath(folder: folder)
+        // 资源目录下 创建文件
+        let filePath =  "\(resourceFolder)\(path.stringByDeletingLastPathComponent)"
+        //创建指定路径下，前面所有的文件夹
+        FileManager.createFolder(atPath:filePath)
+        return "\(filePath)/\(path.lastPathComponent).\(fileExt)"
+    }
+    
+    /// 获取资源路径
+    public static func filePath(_ systemFolder: String? = nil,
+                  folder: String? = nil,
+                  path: String,
+                  fileExt: String) -> String {
+        // 存放至 系统沙盒某目录
+        let resourceFolder = getSynthesisfolderPath(folder: folder)
+        
+        let filePath =  "\(resourceFolder)\(path.stringByDeletingLastPathComponent)"
+        
+        return "\(filePath)/\(path.lastPathComponent).\(fileExt)"
+    }
+    
+    static func getSynthesisfolderPath(_ systemFolder: String? = nil, 
+                                folder: String? = nil) -> String {
+        // 存放至 系统沙盒某目录
+        let boxFolder = if let systemFolder { systemFolder }
+        else { FileManager.cachesPath ?? "" }
+        
+        // 是否在系统下 建立指定文件夹
+        let resourceFolder = if let folder { boxFolder + "/\(folder)" }
+        else { boxFolder }
+        return resourceFolder
+        
+    }
+}
