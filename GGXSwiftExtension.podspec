@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.6.2'
-  s.summary          = 'feat：扩展文件创建path下文件'
+  s.version          = '0.6.3'
+  s.summary          = 'feat：Task扩展对自动异步任务重试，String的base64编解码'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

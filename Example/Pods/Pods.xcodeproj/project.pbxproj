@@ -18,6 +18,7 @@
 		17C640DED33611A01A3F87E070CA8722 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C20B344C9CB1AEA1ACAA073E2F774F /* UIApplication+Extension.swift */; };
 		1A9C64611C2395355B0E95BF6D09D9F0 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1248459F2AB359D6A63CD516A5D6C95 /* URL+Extension.swift */; };
 		1CB34C1FCE2CB8673B14EC79CA6C22DF /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E52EE1C2B06EDDE75D70941392BAAED /* UIKit+Extension.swift */; };
+		1E7CB6572C4DEFDE00DBB3B5 /* Task+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7CB6562C4DEFDE00DBB3B5 /* Task+Extension.swift */; };
 		24356CF1BD3418A26A804CC5CE253C81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		246606E5CC10CE41D6B2608C9644DF58 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474A731952E7E647D124CC86DA5B586D /* ReplaceMe.swift */; };
 		2C635A93A0B2A66A1EEF994CDA1924C5 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA4A5CC375EF87038F0CF72DAD65D4 /* UITableViewCell+Extension.swift */; };
@@ -74,7 +75,8 @@
 		0F628703170B6AFB596C025CDDF55DD9 /* FileManager+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+Extension.swift"; path = "GGXSwiftExtension/Classes/FileManager+Extension.swift"; sourceTree = "<group>"; };
 		0FB8C6B4159B80239703064E8DD46905 /* Pods-GGXSwiftExtension_ExampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGXSwiftExtension_ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		1BB4431DA1459921C0375BCCDCB67F31 /* UserDefault+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UserDefault+Extension.swift"; path = "GGXSwiftExtension/Classes/UserDefault+Extension.swift"; sourceTree = "<group>"; };
-		1F778997F9C084693D1604932B149375 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1E7CB6562C4DEFDE00DBB3B5 /* Task+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+Extension.swift"; path = "GGXSwiftExtension/Classes/Task+Extension.swift"; sourceTree = "<group>"; };
+		1F778997F9C084693D1604932B149375 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		21F8A4C33593EC35695009305F0FB712 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "GGXSwiftExtension/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
 		254E7688F850C89F9C7FF0898BB9D7FA /* Pods-GGXSwiftExtension_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGXSwiftExtension_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		27B74C2D8C949E7BC98F35B826449169 /* Pods-GGXSwiftExtension_ExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GGXSwiftExtension_ExampleTests-dummy.m"; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 		54860F19620C29D50CBBA62A75BD7492 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extension.swift"; path = "GGXSwiftExtension/Classes/UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		5942EA0C9350ED3D07252E052683699D /* GGXSwiftExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GGXSwiftExtension-Info.plist"; sourceTree = "<group>"; };
 		607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GGXSwiftExtension; path = GGXSwiftExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		60A7FF2C898930F8231B713A2A14A7BD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		60A7FF2C898930F8231B713A2A14A7BD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		670C58B4C03BAED6EC20C9DEC9019305 /* Pods-GGXSwiftExtension_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GGXSwiftExtension_Example.modulemap"; sourceTree = "<group>"; };
 		6F8D297314DC72E76718E4CCB3B776A8 /* Pods-GGXSwiftExtension_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGXSwiftExtension_Example"; path = Pods_GGXSwiftExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -105,10 +107,10 @@
 		9271E0F7FB0FDD210D73C5EE4378D97F /* Pods-GGXSwiftExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGXSwiftExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		94F9C32C25F66A784BFC1CE0AA28F9D0 /* UIImage+commonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+commonExtension.swift"; path = "GGXSwiftExtension/Classes/UIImage+commonExtension.swift"; sourceTree = "<group>"; };
 		9A9E85603EACC84B6405D38244443AF4 /* GGXSwiftExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GGXSwiftExtension-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A05D3D175476CFD807D8A1A66D733051 /* Pods-GGXSwiftExtension_ExampleTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGXSwiftExtension_ExampleTests"; path = Pods_GGXSwiftExtension_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07F59F699A365AB549F08E8793D3885 /* UIEdgeInsets+CommonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIEdgeInsets+CommonExtension.swift"; path = "GGXSwiftExtension/Classes/UIEdgeInsets+CommonExtension.swift"; sourceTree = "<group>"; };
-		A2CD1B3AC87CEEFDB7C193D9F7104905 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2CD1B3AC87CEEFDB7C193D9F7104905 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6C33112A6A1E3B2F4E3038754FFC3D6 /* Pods-GGXSwiftExtension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGXSwiftExtension_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A8CE3B9A4062E1B5EE62090770F369C2 /* Pods-GGXSwiftExtension_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGXSwiftExtension_Example-Info.plist"; sourceTree = "<group>"; };
 		ABAB5F5949FA90A38607471749D7DFC3 /* Pods-GGXSwiftExtension_ExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGXSwiftExtension_ExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				7E1F46A7591BFEDABE6482ABC87CE998 /* UIViewController+Extension.swift */,
 				F1248459F2AB359D6A63CD516A5D6C95 /* URL+Extension.swift */,
 				1BB4431DA1459921C0375BCCDCB67F31 /* UserDefault+Extension.swift */,
+				1E7CB6562C4DEFDE00DBB3B5 /* Task+Extension.swift */,
 				787469EC4B3A478FD42124C2A548F6D1 /* WKWebView+Extension.swift */,
 				280917E22A349D62DFC1EF2F93D03019 /* Pod */,
 				41F246BFA5FB841CFA0DCE4269AA1237 /* Support Files */,
@@ -473,6 +476,7 @@
 				246606E5CC10CE41D6B2608C9644DF58 /* ReplaceMe.swift in Sources */,
 				3DF2A21434B369E49F40A4F13908A94C /* String+Extension.swift in Sources */,
 				C9A2BEAAB73D0A2537DDA3BF78B9F6C2 /* TimerInterval+Extension.swift in Sources */,
+				1E7CB6572C4DEFDE00DBB3B5 /* Task+Extension.swift in Sources */,
 				3B55E9817E6DD96F33BCDA0C1E75DF67 /* UIAlertViewController+Extension.swift in Sources */,
 				17C640DED33611A01A3F87E070CA8722 /* UIApplication+Extension.swift in Sources */,
 				6A17EBBEA17CBE88B43A114D20F33BE2 /* UIColor+Extension.swift in Sources */,
@@ -614,8 +618,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
