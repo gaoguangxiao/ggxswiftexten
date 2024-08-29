@@ -62,7 +62,7 @@ struct SwiftUIQRCodeView: View {
         print("状态栏高度\(StatusBarHeight)")
         print("底部安全域\(BOTTOM_MARGIN)")
         print("设备型号\(UIDevice.modelName)")
-        
+        print("设备系统版本\(UIDevice.currentSystemVersion)")
         var isPhoneX = false
         let size = UIScreen.main.bounds.size// [UIScreen mainScreen].bounds.size;\
         let notchValue = size.width / size.height * 100;
