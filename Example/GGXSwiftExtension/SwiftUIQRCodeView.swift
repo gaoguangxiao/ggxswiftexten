@@ -46,6 +46,9 @@ struct SwiftUIQRCodeView: View {
         let path = Bundle.main.url(forResource: "a9656f6b-df60-403a-977e-8962c2177544", withExtension: "mp3");
 //        path?.toMD5()
         print("\(path?.toMD5())")
+//        0.79470M、16.98867M、0.03095M
+        let b = "3.59193M".toDiskSize()
+        print(b)
     }
     
     func testApplication () {

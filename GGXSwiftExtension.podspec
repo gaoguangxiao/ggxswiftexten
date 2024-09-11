@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.6.7'
+  s.version          = '0.6.8'
   s.summary          = 'fix：磁盘字节转化'
 
 # This description is used to generate tags and improve search results.
