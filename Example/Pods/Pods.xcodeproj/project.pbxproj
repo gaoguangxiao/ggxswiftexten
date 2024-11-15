@@ -18,6 +18,7 @@
 		16AA07BB04B238CFA58B841C38184736 /* JSONDecoderImpl+SingleValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B564744FB01FAE2BAE9E2FAE331527 /* JSONDecoderImpl+SingleValueContainer.swift */; };
 		195B88EC98A414D15780F974E581E3AC /* SmartKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FD830CFF7E7D0D5BEEDCA6345024F2 /* SmartKeyDecodingStrategy.swift */; };
 		1E3E13EB0ACCEBB520501716C3F2E2D9 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7789085D3CA31102ECBD287F36178476 /* Int+Extension.swift */; };
+		1E8431CD2CE718AF009EE8FD /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8431CC2CE718AF009EE8FD /* CGPoint+Extension.swift */; };
 		1F0007691A4C2E47F4C2343B5543271F /* UIEdgeInsets+CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31306296A1D2D3B94713C0D10CFF86F /* UIEdgeInsets+CommonExtension.swift */; };
 		2275CDE93D65CBD6998E718FBF7CE41E /* SmartCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5E38D10C001E3825120359CD74F42 /* SmartCodable.swift */; };
 		22AF13BCA60279D4091EAA8ACFEBB379 /* SmartLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D6E84D8F1224EEB409B78DDE911A2 /* SmartLog.swift */; };
@@ -126,12 +127,13 @@
 		05EE60A2DDA95C4985DC4747761BDB24 /* Task+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+Extension.swift"; path = "GGXSwiftExtension/Classes/Task+Extension.swift"; sourceTree = "<group>"; };
 		07E6F38B8741D3EDF24EE04AA732C2A8 /* Pods-GGXSwiftExtension_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GGXSwiftExtension_Example-frameworks.sh"; sourceTree = "<group>"; };
 		09A7DE85E51261AB8BFBF9A77D0475EE /* JSONUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONUnkeyedEncodingContainer.swift; path = SmartCodable/Classes/JSONEncoder/Container/JSONUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
-		0A292DEB20442CA810A6208C5EF4CC37 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0A292DEB20442CA810A6208C5EF4CC37 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0F1B9707BE42303E3C277F9C07539685 /* Patcher+Provider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Patcher+Provider.swift"; path = "SmartCodable/Classes/JSONDecoder/Patcher/Patcher+Provider.swift"; sourceTree = "<group>"; };
 		0F5C257F403CA9EBD9720A847CDF5B88 /* JSONKeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONKeyedEncodingContainer.swift; path = SmartCodable/Classes/JSONEncoder/Container/JSONKeyedEncodingContainer.swift; sourceTree = "<group>"; };
 		0FB8C6B4159B80239703064E8DD46905 /* Pods-GGXSwiftExtension_ExampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGXSwiftExtension_ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		114DF97A0325F75A412D3B8FF216F707 /* LogSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogSwift.swift; path = GGXSwiftExtension/Classes/LogSwift.swift; sourceTree = "<group>"; };
 		18C60842350302743E7D7A9F50569C85 /* SmartFlat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartFlat.swift; path = SmartCodable/Classes/SmartType/SmartFlat.swift; sourceTree = "<group>"; };
+		1E8431CC2CE718AF009EE8FD /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CGPoint+Extension.swift"; path = "GGXSwiftExtension/Classes/CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		214D46EC34839B2328AD85E8393CAF3F /* SmartCodable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartCodable-umbrella.h"; sourceTree = "<group>"; };
 		2262D6891BBEF328AB2D1EE8AC3FB964 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extension.swift"; path = "GGXSwiftExtension/Classes/UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		22D69D1D13441D1B6207D9D489EA5FC0 /* DecodingError+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DecodingError+Extension.swift"; path = "SmartCodable/Classes/JSONDecoder/Decoder/DecodingError+Extension.swift"; sourceTree = "<group>"; };
@@ -149,12 +151,12 @@
 		2E52AA1FB9EF46D5A9E9E499686575D9 /* SafeDictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SafeDictionary.swift; path = SmartCodable/Classes/Log/SafeDictionary.swift; sourceTree = "<group>"; };
 		3257E447E79A3617636840838BDC0522 /* Double+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+Extension.swift"; path = "GGXSwiftExtension/Classes/Double+Extension.swift"; sourceTree = "<group>"; };
 		32DFC04A9E64A5C7E25C18AA6DFE2AA6 /* UIImage+commonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+commonExtension.swift"; path = "GGXSwiftExtension/Classes/UIImage+commonExtension.swift"; sourceTree = "<group>"; };
-		364B8EC866FB11DCF9FF3DFDC23623AE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		364B8EC866FB11DCF9FF3DFDC23623AE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3979D89A068728C583012B051BF87078 /* JSONEncoderImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncoderImpl.swift; path = SmartCodable/Classes/JSONEncoder/Impl/JSONEncoderImpl.swift; sourceTree = "<group>"; };
 		399947F7FCCB69D2DABC6B23F205E572 /* GGXSwiftExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGXSwiftExtension.debug.xcconfig; sourceTree = "<group>"; };
 		3CB5B054611A772B45306D8A4ED26AFC /* LogContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogContainer.swift; path = SmartCodable/Classes/Log/LogContainer.swift; sourceTree = "<group>"; };
 		3E4FF7E869BFA787BCC00C83E7B7B61B /* ColorTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorTransformer.swift; path = SmartCodable/Classes/Transformer/ColorTransformer.swift; sourceTree = "<group>"; };
-		3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SmartCodable; path = SmartCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC49ACFBEBAE25B1567B47EF200C1AA /* GGXSwiftExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGXSwiftExtension-umbrella.h"; sourceTree = "<group>"; };
 		48630BF4D087C5DAF234822D2D15FF1C /* FileManager+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+Extension.swift"; path = "GGXSwiftExtension/Classes/FileManager+Extension.swift"; sourceTree = "<group>"; };
 		48DD4CD0BEFD222E8967E90F502213AF /* SmartCaseDefaultable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartCaseDefaultable.swift; path = SmartCodable/Classes/SmartType/SmartCaseDefaultable.swift; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 		4FC340B75461B686697BAC8B74747B9B /* JSONDecoderImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONDecoderImpl.swift; path = SmartCodable/Classes/JSONDecoder/Decoder/Impl/JSONDecoderImpl.swift; sourceTree = "<group>"; };
 		5617B10A58630BB3E1C98FE637645ABD /* SmartCodable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartCodable.release.xcconfig; sourceTree = "<group>"; };
 		58A2A520F4FEAA1C1D8FB0E9FA6C4EBA /* Dictionary+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extension.swift"; path = "GGXSwiftExtension/Classes/Dictionary+Extension.swift"; sourceTree = "<group>"; };
-		607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GGXSwiftExtension; path = GGXSwiftExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GGXSwiftExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		615217D4132CA482360BDF2880E58DE3 /* URLTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransformer.swift; path = SmartCodable/Classes/Transformer/URLTransformer.swift; sourceTree = "<group>"; };
 		616DAAA615CBFA96A544EC635004DFF9 /* Date+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Extension.swift"; path = "GGXSwiftExtension/Classes/Date+Extension.swift"; sourceTree = "<group>"; };
 		633D14CD253E8337B8C13C70F8C48C19 /* SmartCodable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmartCodable-Info.plist"; sourceTree = "<group>"; };
@@ -172,7 +174,7 @@
 		6B1F76E3D1266E9A482C178A72EC6DF4 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extension.swift"; path = "GGXSwiftExtension/Classes/UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6B46B1240EE1D4B2DDB826DE7B28B33A /* DateTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTransformer.swift; path = SmartCodable/Classes/Transformer/DateTransformer.swift; sourceTree = "<group>"; };
 		6B47F5A84142A77966B88421AEFAFD05 /* SmartAny.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartAny.swift; path = SmartCodable/Classes/SmartType/SmartAny/SmartAny.swift; sourceTree = "<group>"; };
-		6F8D297314DC72E76718E4CCB3B776A8 /* Pods-GGXSwiftExtension_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGXSwiftExtension_Example"; path = Pods_GGXSwiftExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F8D297314DC72E76718E4CCB3B776A8 /* Pods_GGXSwiftExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGXSwiftExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72115A1404B97F1ECD2BBBAC17AA2C7C /* JSONDecoderImpl+UnkeyedContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONDecoderImpl+UnkeyedContainer.swift"; path = "SmartCodable/Classes/JSONDecoder/Decoder/Impl/JSONDecoderImpl+UnkeyedContainer.swift"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		748A4C4DD28215ECCC8EAAE9F9403C6E /* JSONParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONParser.swift; path = SmartCodable/Classes/JSONValue/JSONParser.swift; sourceTree = "<group>"; };
@@ -192,9 +194,9 @@
 		9799AA49DCF0FCAB55639EB9F907393A /* LogCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogCache.swift; path = SmartCodable/Classes/Log/LogCache.swift; sourceTree = "<group>"; };
 		97EABEB90E27A604D347DB22A24EF326 /* SmartEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartEncodable.swift; path = SmartCodable/Classes/SmartCodable/SmartEncodable.swift; sourceTree = "<group>"; };
 		9A53B225A4616FF826924D115E418298 /* Cachable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cachable.swift; path = SmartCodable/Classes/Cache/Cachable.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EF8E8EE6E7D24529AC8FE0E2024F405 /* KeysMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeysMapper.swift; path = SmartCodable/Classes/JSONDecoder/Decoder/KeysMapper.swift; sourceTree = "<group>"; };
-		A05D3D175476CFD807D8A1A66D733051 /* Pods-GGXSwiftExtension_ExampleTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGXSwiftExtension_ExampleTests"; path = Pods_GGXSwiftExtension_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05D3D175476CFD807D8A1A66D733051 /* Pods_GGXSwiftExtension_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGXSwiftExtension_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FD830CFF7E7D0D5BEEDCA6345024F2 /* SmartKeyDecodingStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartKeyDecodingStrategy.swift; path = SmartCodable/Classes/JSONDecoder/Decoder/SmartKeyDecodingStrategy.swift; sourceTree = "<group>"; };
 		A1D26D6149232FF10040E68451D2B6B1 /* IgnoredKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IgnoredKey.swift; path = SmartCodable/Classes/SmartType/IgnoredKey.swift; sourceTree = "<group>"; };
 		A4867EABD304B99D581735E27E467622 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "GGXSwiftExtension/Classes/UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -221,7 +223,7 @@
 		CB59020F3C197422C45EFDD7B75836C9 /* Pods-GGXSwiftExtension_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGXSwiftExtension_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		D25B0B3B395282E26A0AAE6C69F57651 /* Pods-GGXSwiftExtension_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GGXSwiftExtension_Example-umbrella.h"; sourceTree = "<group>"; };
 		D414D7665C1D8409BEB5D491F8E93F92 /* Bundle+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Extension.swift"; path = "GGXSwiftExtension/Classes/Bundle+Extension.swift"; sourceTree = "<group>"; };
-		D437EE7D85839582CF0E807978B7D1B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D437EE7D85839582CF0E807978B7D1B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D4B564744FB01FAE2BAE9E2FAE331527 /* JSONDecoderImpl+SingleValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONDecoderImpl+SingleValueContainer.swift"; path = "SmartCodable/Classes/JSONDecoder/Decoder/Impl/JSONDecoderImpl+SingleValueContainer.swift"; sourceTree = "<group>"; };
 		D5045360BA081A86DDA0962E7BC61DCA /* SmartCodable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmartCodable.modulemap; sourceTree = "<group>"; };
 		D62AC4E5834DD165488989A5F03589C9 /* UIResponder+ Extension.swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIResponder+ Extension.swift.swift"; path = "GGXSwiftExtension/Classes/UIResponder+ Extension.swift.swift"; sourceTree = "<group>"; };
@@ -345,7 +347,6 @@
 				615217D4132CA482360BDF2880E58DE3 /* URLTransformer.swift */,
 				BEF1CE4BDDEE2EEE4493A9B7A7A1AA35 /* Support Files */,
 			);
-			name = SmartCodable;
 			path = SmartCodable;
 			sourceTree = "<group>";
 		};
@@ -390,6 +391,7 @@
 				F67F85AEE5BB2913BFC3707969929648 /* AVAudioSession+Extension.swift */,
 				D414D7665C1D8409BEB5D491F8E93F92 /* Bundle+Extension.swift */,
 				E88936ED05B9475CB1054EE1A4549B9A /* CGSize+Extension.swift */,
+				1E8431CC2CE718AF009EE8FD /* CGPoint+Extension.swift */,
 				616DAAA615CBFA96A544EC635004DFF9 /* Date+Extension.swift */,
 				791BDB55CDCB201BDBBD20086ED67C81 /* DateFormatter+Extension.swift */,
 				58A2A520F4FEAA1C1D8FB0E9FA6C4EBA /* Dictionary+Extension.swift */,
@@ -435,10 +437,10 @@
 		961601439135FD2EE6C83740CEB5B976 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */,
-				6F8D297314DC72E76718E4CCB3B776A8 /* Pods-GGXSwiftExtension_Example */,
-				A05D3D175476CFD807D8A1A66D733051 /* Pods-GGXSwiftExtension_ExampleTests */,
-				3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable */,
+				607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension.framework */,
+				6F8D297314DC72E76718E4CCB3B776A8 /* Pods_GGXSwiftExtension_Example.framework */,
+				A05D3D175476CFD807D8A1A66D733051 /* Pods_GGXSwiftExtension_ExampleTests.framework */,
+				3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -565,7 +567,7 @@
 			);
 			name = "Pods-GGXSwiftExtension_ExampleTests";
 			productName = Pods_GGXSwiftExtension_ExampleTests;
-			productReference = A05D3D175476CFD807D8A1A66D733051 /* Pods-GGXSwiftExtension_ExampleTests */;
+			productReference = A05D3D175476CFD807D8A1A66D733051 /* Pods_GGXSwiftExtension_ExampleTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		34208A50A6E2389A7BB30C187CD9E2A4 /* GGXSwiftExtension */ = {
@@ -583,7 +585,7 @@
 			);
 			name = GGXSwiftExtension;
 			productName = GGXSwiftExtension;
-			productReference = 607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */;
+			productReference = 607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8AD7161D82469113F02F07DAD53D663F /* Pods-GGXSwiftExtension_Example */ = {
@@ -603,7 +605,7 @@
 			);
 			name = "Pods-GGXSwiftExtension_Example";
 			productName = Pods_GGXSwiftExtension_Example;
-			productReference = 6F8D297314DC72E76718E4CCB3B776A8 /* Pods-GGXSwiftExtension_Example */;
+			productReference = 6F8D297314DC72E76718E4CCB3B776A8 /* Pods_GGXSwiftExtension_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BD33823B9D08265B6F1D35EC259EE307 /* SmartCodable */ = {
@@ -621,7 +623,7 @@
 			);
 			name = SmartCodable;
 			productName = SmartCodable;
-			productReference = 3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable */;
+			productReference = 3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -698,6 +700,7 @@
 				5525A1C4C58D6147879CD53E43D5EFD7 /* Date+Extension.swift in Sources */,
 				3FBC402ABEF9F508DC9CB349BE741DE8 /* DateFormatter+Extension.swift in Sources */,
 				13262BECDB111332094D00B084F04F28 /* Dictionary+Extension.swift in Sources */,
+				1E8431CD2CE718AF009EE8FD /* CGPoint+Extension.swift in Sources */,
 				09127ABB564DE0D570E7B87032419951 /* Double+Extension.swift in Sources */,
 				693135B6229094A5AE9A935292F3B3EA /* FileManager+Extension.swift in Sources */,
 				56500BBBD899E64E964DCE9591BAC0CC /* GGXSwiftExtension-dummy.m in Sources */,
@@ -1073,8 +1076,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

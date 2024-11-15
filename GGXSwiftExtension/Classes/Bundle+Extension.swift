@@ -21,7 +21,6 @@ public extension Bundle {
             print("URL为空")
             return nil
         }
-        print("bunle:\(filePath)")
         //将文件数据转化为Data
         let fileData = try? Data(contentsOf: uurl)
         guard let fData = fileData else {
