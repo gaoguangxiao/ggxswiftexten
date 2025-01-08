@@ -38,17 +38,41 @@ struct SwiftUIQRCodeView: View {
                 Text("音频文件MD5")
             }
 
+            //
+            Button {
+                testError()
+            } label: {
+                Text("调试debug错误")
+            }
         }
         
     }
     
+    func testError() {
+        let errorStr = "DidError、clientErrMessage："
+        let error = NSError(domain: "com.ggxextension.app", code: -1,userInfo: [NSLocalizedDescriptionKey:errorStr,
+                                                                         NSLocalizedFailureReasonErrorKey:"unkonw"])
+        print(error.localizedDescription)
+        print(error.localizedFailureReason)
+        
+        print("Error: \(error.localizedDescription)")
+
+    }
+    
     func testAudioFileMd5() {
-        let path = Bundle.main.url(forResource: "a9656f6b-df60-403a-977e-8962c2177544", withExtension: "mp3");
-//        path?.toMD5()
-        print("\(path?.toMD5())")
+
+        let fileName = "baojian"
+        if let fileURL = Bundle.main.url(forResource: fileName, withExtension: "png") {
+            let filePath = fileURL.path
+            print("本地文件路径: \(filePath)")
+//            if let newMd5 = URL.calculateFileMD5(filePath: filePath) {
+//                print("new md5 is \(newMd5)")
+//            }
+
+        }
 //        0.79470M、16.98867M、0.03095M
-        let b = "3.59193M".toDiskSize()
-        print(b)
+//        let b = "3.59193M".toDiskSize()
+//        print(b)
     }
     
     func testApplication () {
@@ -66,13 +90,14 @@ struct SwiftUIQRCodeView: View {
         print("底部安全域\(BOTTOM_MARGIN)")
         print("设备型号\(UIDevice.modelName)")
         print("设备系统版本\(UIDevice.currentSystemVersion)")
-        var isPhoneX = false
-        let size = UIScreen.main.bounds.size// [UIScreen mainScreen].bounds.size;\
-        let notchValue = size.width / size.height * 100;
-        if notchValue == 216 || notchValue == 46 {
-            isPhoneX = true
-        }
-        print("notchValue: \(notchValue)")
+        let isPhoneX = UIDevice.isNotch
+    
+        //        let size = UIScreen.main.bounds.size// [UIScreen mainScreen].bounds.size;\
+//        let notchValue = size.width / size.height * 100;
+//        if notchValue == 216 || notchValue == 46 {
+//            isPhoneX = true
+//        }
+//        print("notchValue: \(notchValue)")
         print("isIPhone: \(isPhoneX)")
     }
     

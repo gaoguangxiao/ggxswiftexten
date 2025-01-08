@@ -11,6 +11,7 @@
 		1E4CA7B72AEB8C1700954CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CA7B62AEB8C1700954CA7 /* SceneDelegate.swift */; };
 		1E53CBB52ABD3D270075BC42 /* JSBridgeAPITest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */; };
 		1E56A4042B96BF0600386E72 /* SwiftUIQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E56A4032B96BF0600386E72 /* SwiftUIQRCodeView.swift */; };
+		1E59FCC02D1D2FB900DB67B2 /* baojian.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E59FCBF2D1D2FB900DB67B2 /* baojian.png */; };
 		1E61A2BB2AC52F9000914105 /* 20230919093347.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1E61A2BA2AC52F9000914105 /* 20230919093347.wav */; };
 		1E6E86902ABC3E1A0023552F /* 111.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E868F2ABC3E1A0023552F /* 111.mov */; };
 		1E78406F2C50CBB4000D36AE /* TaskContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78406E2C50CBB4000D36AE /* TaskContentView.swift */; };
@@ -41,6 +42,7 @@
 		1E4CA7B62AEB8C1700954CA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1E53CBB42ABD3D270075BC42 /* JSBridgeAPITest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSBridgeAPITest.json; sourceTree = "<group>"; };
 		1E56A4032B96BF0600386E72 /* SwiftUIQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIQRCodeView.swift; sourceTree = "<group>"; };
+		1E59FCBF2D1D2FB900DB67B2 /* baojian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baojian.png; sourceTree = "<group>"; };
 		1E61A2BA2AC52F9000914105 /* 20230919093347.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 20230919093347.wav; sourceTree = "<group>"; };
 		1E6E868F2ABC3E1A0023552F /* 111.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 111.mov; sourceTree = "<group>"; };
 		1E78406E2C50CBB4000D36AE /* TaskContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskContentView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				1E4CA7B62AEB8C1700954CA7 /* SceneDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				1E56A4032B96BF0600386E72 /* SwiftUIQRCodeView.swift */,
+				1E59FCBF2D1D2FB900DB67B2 /* baojian.png */,
 				1E78406E2C50CBB4000D36AE /* TaskContentView.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -238,7 +241,7 @@
 					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = M6KU4P4925;
+						DevelopmentTeam = MC9Q66TLXQ;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -279,6 +282,7 @@
 				1E7C1EF32C3B8BD800445F95 /* a9656f6b-df60-403a-977e-8962c2177544.mp3 in Resources */,
 				1E87914E2B4FEB5000221160 /* lanlongbabu_2.png in Resources */,
 				1E53CBB52ABD3D270075BC42 /* JSBridgeAPITest.json in Resources */,
+				1E59FCC02D1D2FB900DB67B2 /* baojian.png in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				1E6E86902ABC3E1A0023552F /* 111.mov in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -573,7 +577,7 @@
 			baseConfigurationReference = FE7476B20C319A60AE5166F7 /* Pods-GGXSwiftExtension_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M6KU4P4925;
+				DEVELOPMENT_TEAM = MC9Q66TLXQ;
 				INFOPLIST_FILE = GGXSwiftExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -593,7 +597,7 @@
 			baseConfigurationReference = 4993E3D7E3C8150F94D46E45 /* Pods-GGXSwiftExtension_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M6KU4P4925;
+				DEVELOPMENT_TEAM = MC9Q66TLXQ;
 				INFOPLIST_FILE = GGXSwiftExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
