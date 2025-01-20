@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.8.0'
-  s.summary          = 'change：增加媒体类型atlas'
+  s.version          = '0.8.1'
+  s.summary          = 'change：`AVAudioSession`print打印'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
