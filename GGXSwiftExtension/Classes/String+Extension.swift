@@ -198,6 +198,28 @@ public extension String {
 // MARK: - URL Encode & Decode
 public extension String {
         
+    
+    var encodeLocalOrRemoteForUrl: URL? {
+        let canUseCache = FileManager.default.fileExists(atPath: self)
+        var audioUrl: URL?
+        if canUseCache {
+            var fileUrl : URL?
+            if #available(iOS 16.0, *) {
+                fileUrl = URL(filePath: self)
+            } else {
+                // Fallback on earlier versions
+                fileUrl = URL(fileURLWithPath: self)
+            }
+            audioUrl = fileUrl
+        } else {
+            guard let escapedURLString = self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
+                return nil
+            }
+            audioUrl = URL(string: escapedURLString)
+        }
+        return audioUrl
+    }
+    
     var toUrl: URL? {
         if let url = URL.init(string: self) {
             return url
