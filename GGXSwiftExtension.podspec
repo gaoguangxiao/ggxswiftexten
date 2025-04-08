@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.8.5'
+  s.version          = '0.8.6'
   s.summary          = 'feat：`String`的URL编码'
 
 # This description is used to generate tags and improve search results.
