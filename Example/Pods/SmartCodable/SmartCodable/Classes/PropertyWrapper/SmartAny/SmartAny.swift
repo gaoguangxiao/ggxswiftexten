@@ -2,12 +2,19 @@
 //  SmartAny.swift
 //  SmartCodable
 //
-//  Created by qixin on 2024/6/13.
+//  Created by Mccc on 2024/6/13.
 //
 
-/// Attribute wrapper, used to wrap Any.
+/// Attribute wrapper, used to wrap Any.SmartAny allows only Any, [Any], and [String: Any] types to be modified.
+/// 被属性包装器包裹的，不会调用didFinishMapping方法。
+/// Swift的类型系统在运行时无法直接识别出wrappedValue的实际类型，需要各个属性包装器自行处理。
+
+
+
+
 @propertyWrapper
 public struct SmartAny<T>: Codable {
+    
     public var wrappedValue: T
 
     public init(wrappedValue: T) {
@@ -30,10 +37,18 @@ public struct SmartAny<T>: Codable {
             }
         }
                 
-        if let new = try? decoder.unwrap(as: SmartAnyImpl.self),
-           let peel = new.peel as? T {
+        if let decoded = try? decoder.unwrap(as: SmartAnyImpl.self), let peel = decoded.peel as? T {
             self = .init(wrappedValue: peel)
         } else {
+            
+            // 类型检查
+            if let _type = T.self as? Decodable.Type {
+                if let decoded = try? _type.init(from: decoder) as? T {
+                    self = .init(wrappedValue: decoded)
+                    return
+                }
+            }
+            
             // Exceptions thrown in the parse container will be compatible.
             throw DecodingError.typeMismatch(Self.self, DecodingError.Context(
                 codingPath: decoder.codingPath, debugDescription: "Expected \(Self.self) value，but an exception occurred！")
@@ -51,6 +66,8 @@ public struct SmartAny<T>: Codable {
         } else if let arr = wrappedValue as? [Any] {
             let value = arr.cover
             try container.encode(value)
+        } else if let model = wrappedValue as? SmartCodable {
+            try container.encode(model)
         } else {
             let value = SmartAnyImpl(from: wrappedValue)
             try container.encode(value)
@@ -59,3 +76,12 @@ public struct SmartAny<T>: Codable {
 }
 
 
+extension SmartAny: WrapperLifecycle {
+    func wrappedValueDidFinishMapping() -> SmartAny<T>? {
+        if var temp = wrappedValue as? SmartDecodable {
+            temp.didFinishMapping()
+            return SmartAny(wrappedValue: temp as! T)
+        }
+        return nil
+    }
+}

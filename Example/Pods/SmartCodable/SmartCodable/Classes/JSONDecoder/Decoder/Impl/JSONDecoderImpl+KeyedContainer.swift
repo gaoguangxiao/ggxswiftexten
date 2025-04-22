@@ -2,7 +2,7 @@
 //  JSONDecoderImpl+KeyedContainer.swift
 //  SmartCodable
 //
-//  Created by qixin on 2024/5/17.
+//  Created by Mccc on 2024/5/17.
 //
 
 import Foundation
@@ -116,10 +116,7 @@ extension JSONDecoderImpl {
         
         @inline(__always) private func getValue<LocalKey: CodingKey>(forKey key: LocalKey) throws -> JSONValue {
             guard let value = dictionary[key.stringValue] else {
-                throw DecodingError.keyNotFound(key, .init(
-                    codingPath: self.codingPath,
-                    debugDescription: "No value associated with key \(key) (\"\(key.stringValue)\")."
-                ))
+                throw DecodingError._keyNotFound(key: key, codingPath: self.codingPath)
             }
             
             return value
@@ -182,7 +179,7 @@ extension JSONDecoderImpl.KeyedContainer {
         guard let value = try? getValue(forKey: key) else {
             return try forceDecode(forKey: key)
         }
-            
+        
         if let decoded = impl.cache.tranform(value: value, for: key) as? String {
             return decoded
         }
@@ -288,18 +285,28 @@ extension JSONDecoderImpl.KeyedContainer {
             return try decode(CGFloat.self, forKey: key) as! T
         }
         
+        // 如果值可以被成功获取
         if let value = try? getValue(forKey: key) {
-            if let decoded = impl.cache.tranform(value: value, for: key) as? T {
-                return decoded
+            if let decoded = impl.cache.tranform(value: value, for: key) {
+                if let tTypeValue = decoded as? T {
+                    return tTypeValue
+                } else if let publishedType = T.self as? any SmartPublishedProtocol.Type,
+                          let publishedValue = publishedType.createInstance(with: decoded) as? T {
+                    // // 检查 SmartPublished 包装器类型
+                    return publishedValue
+                }
             }
         }
         
         
+        
         if let type = type as? FlatType.Type {
             if type.isArray {
-                return try T(from: superDecoder(forKey: key))
+                let decoded = try T(from: superDecoder(forKey: key))
+                return didFinishMapping(decoded)
             } else {
-                return try T(from: impl)
+                let decoded = try T(from: impl)
+                return didFinishMapping(decoded)
             }
         } else {
             do {
@@ -318,7 +325,9 @@ extension JSONDecoderImpl.KeyedContainer {
 extension JSONDecoderImpl.KeyedContainer {
     
     func decodeIfPresent(_ type: Bool.Type, forKey key: K) throws -> Bool? {
-        guard let value = try? getValue(forKey: key) else { return nil }
+        guard let value = try? getValue(forKey: key) else {
+            return optionalDecode(forKey: key)
+        }
         
         if let decoded = impl.cache.tranform(value: value, for: key) as? Bool {
             return decoded
@@ -331,7 +340,9 @@ extension JSONDecoderImpl.KeyedContainer {
     }
     
     func decodeIfPresent(_ type: String.Type, forKey key: K) throws -> String? {
-        guard let value = try? getValue(forKey: key) else { return nil }
+        guard let value = try? getValue(forKey: key) else {
+            return optionalDecode(forKey: key)
+        }
         
         if let decoded = impl.cache.tranform(value: value, for: key) as? String {
             return decoded
@@ -459,7 +470,7 @@ extension JSONDecoderImpl.KeyedContainer {
         if let decoded = try? newDecoder.unwrap(as: type) {
             return didFinishMapping(decoded)
         }
-
+        
         if let decoded: T = optionalDecode(forKey: key) {
             return didFinishMapping(decoded)
         } else {
@@ -474,14 +485,14 @@ extension JSONDecoderImpl.KeyedContainer {
     fileprivate func optionalDecode<T>(forKey key: Key) -> T? {
         
         guard let value = try? getValue(forKey: key) else {
-            SmartLog.createLog(impl: impl, forKey: key, value: nil, type: T.self)
+            SmartSentinel.monitorLog(impl: impl, forKey: key, value: nil, type: T.self)
             if let initializer: T = impl.cache.getValue(forKey: key) {
                 return initializer
             }
             return nil
         }
         
-        SmartLog.createLog(impl: impl, forKey: key, value: value, type: T.self)
+        SmartSentinel.monitorLog(impl: impl, forKey: key, value: value, type: T.self)
         
         if let decoded = Patcher<T>.convertToType(from: value, impl: impl) {
             return decoded
@@ -505,11 +516,11 @@ extension JSONDecoderImpl.KeyedContainer {
         }
         
         guard let value = try? getValue(forKey: key) else {
-            SmartLog.createLog(impl: impl, forKey: key, value: nil, type: T.self)
+            SmartSentinel.monitorLog(impl: impl, forKey: key, value: nil, type: T.self)
             return try fillDefault()
         }
         
-        SmartLog.createLog(impl: impl, forKey: key, value: value, type: T.self)
+        SmartSentinel.monitorLog(impl: impl, forKey: key, value: value, type: T.self)
         if let decoded = Patcher<T>.convertToType(from: value, impl: impl) {
             return decoded
         } else {
@@ -519,9 +530,15 @@ extension JSONDecoderImpl.KeyedContainer {
     
     
     fileprivate func didFinishMapping<T>(_ decodeValue: T) -> T {
+        // 被属性包装器包裹的属性，是没遵循SmartDecodable协议的。
+        // 这里使用WrapperLifecycle做一层中转处理
         if var value = decodeValue as? SmartDecodable {
             value.didFinishMapping()
             if let temp = value as? T { return temp }
+        } else if let value = decodeValue as? WrapperLifecycle {
+            if let temp = value.wrappedValueDidFinishMapping() as? T {
+                return temp
+            }
         }
         return decodeValue
     }
@@ -557,7 +574,7 @@ fileprivate func _convertDictionary(_ dictionary: [String: JSONValue], impl: JSO
         }, uniquingKeysWith: { (first, _) in first })
     }
     
-    guard let type = impl.cache.decodedType else { return dictionary }
+    guard let type = impl.cache.topSnapshot?.objectType else { return dictionary }
     
     if let tempValue = KeysMapper.convertFrom(JSONValue.object(dictionary), type: type), let dict = tempValue.object {
         return dict

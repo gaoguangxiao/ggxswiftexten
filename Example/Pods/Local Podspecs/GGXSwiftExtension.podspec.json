@@ -1,7 +1,7 @@
 {
   "name": "GGXSwiftExtension",
-  "version": "0.6.4",
-  "summary": "feat：Task任务自动重试增加条件",
+  "version": "0.8.6",
+  "summary": "feat：`String`的URL编码",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/ggxswiftexten.git",
-    "tag": "0.6.4"
+    "tag": "0.8.6"
   },
   "swift_versions": "5.0",
   "platforms": {

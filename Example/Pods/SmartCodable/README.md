@@ -8,10 +8,8 @@
 
 [![Swift Package Manager](https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
 [![Platforms](https://img.shields.io/cocoapods/p/ExCodable.svg)](#readme)
-[![Build and Test](https://github.com/iwill/ExCodable/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/iwill/ExCodable/actions/workflows/build-and-test.yml)
-[![GitHub Releases (latest SemVer)](https://img.shields.io/github/v/release/iwill/ExCodable.svg?sort=semver)](https://github.com/iwill/ExCodable/releases)
-[![LICENSE](https://img.shields.io/github/license/iwill/ExCodable.svg)](https://github.com/iwill/ExCodable/blob/master/LICENSE)
-
+[![Build and Test](https://github.com/iwill/ExCodable/actions/workflows/build-and-test.yml/badge.svg)]()
+[![LICENSE](https://img.shields.io/github/license/iwill/ExCodable.svg)](https://github.com/intsig171/SmartCodable/blob/main/LICENSE)
 
 **SmartCodable** is a data parsing library based on Swift's **Codable** protocol, designed to provide more powerful and flexible parsing capabilities. By optimizing and rewriting the standard features of **Codable**, **SmartCodable** effectively solves common problems in the traditional parsing process and improves the fault tolerance and flexibility of parsing.
 
@@ -27,6 +25,21 @@ let model = Model.deserialize(from: json)
 ```
 
 
+
+SmartCodable在Codable基础上做了大幅度的优化，支持：
+
+| 类型   | 特性             | 说明                                                         |
+| ------ | ---------------- | ------------------------------------------------------------ |
+| 兼容   | 强大的异常兼容   | 当遇到数据类型错误/值为null/缺少数据等情况触发的Codable异常，可以完美兼容。 |
+| 兼容   | 支持类型自适应   | 如JSON中是一个Int，但对应Model是String字段，会自动完成转化。 |
+| 兼容   | 支持属性初始值   | 当解析失败时，使用此值填充。                                 |
+| 兼容   | 内json的模型化   | 当某个数据是json时，支持进行Model化解析。                    |
+| 新特性 | 支持Any的解析    | Codable不支持Any，SmartCodable支持！                         |
+| 新特性 | 自定义Key映射    | 当数据字段和Model属性名不一致时，可以方便的自定义映射关系。  |
+| 新特性 | 自定义Value解析  | 支持自定义解析规则                                           |
+| 新特性 | 提供多种全局策略 | 数据的蛇形命名转驼峰，首字母转小写，首字母转大写             |
+| 新特性 | 解析完成的回调   | 你可以知道解析完成的时机，去做一些事情。                     |
+| 新特性 | 支持解析更新     | 对一个解析完成的model进行增量更新。                          |
 
 ## Use SmartCodable
 
@@ -94,38 +107,98 @@ If you don't know how to use it, check it out.
 
 
 
+### Supported types
+
+只要遵循了Codable，就可以参与解析。
+
+* Int/Int8/Int16/Int32/Int64
+
+* UInt/UInt8/UInt16/UInt32/UInt64
+
+* String
+
+* Bool
+
+* Float/CGFloat/Double
+
+* Dictionary（如果包含Any，请使用@SmartAny修饰该字典）
+
+* Array（如果包含Any，请使用@SmartAny修饰该数组）
+
+* URL/Date/Data/UIColor/enum
+
+* 其他遵循了Codable协议的类型。
+
+  
+
+
+
 ## SmarCodable Test
 
  [👉 To learn more about how SmartCodable is tested, click here](https://github.com/intsig171/SmartCodable/blob/main/Document/README/HowToTest.md)
 
 
 
-## Debug log
+## **Sentinel** 哨兵模式
 
-**SmartLog Error** indicates that **SmartCodable** encountered a resolution problem and executed compatibility logic. This does not mean that the analysis failed.
+SmartCodable内部集成了**Smart Sentinel**，它可以监听整个解析过程。当解析结束之后，输出格式化的日志信息。
 
-SmartCodable encourages the root of the resolution problem: it does not require SmartCodable compatibility logic.
-
-出现 **SmartLog Error** 日志代表着 **SmartCodable** 遇到了解析问题，执行了兼容逻辑。 并不代表着本次解析失败。
-
-SmartCodable鼓励从根本上解决解析中的问题，即：不需要用到SmartCodable的兼容逻辑。 
+该信息仅作辅助信息，帮助发现并排查问题。并不代表本次解析失败。
 
 ```
- ========================  [Smart Decoding Log]  ========================
- Family 👈🏻 👀
-    |- name    : Expected to decode String but found an array instead.
-    |- location: Expected to decode String but found an array instead.
-    |- date    : Expected to decode Date but found an array instead.
-    |> father: Father
-       |- name: Expected String value but found null instead.
-       |- age : Expected to decode Int but found a string/data instead.
-       |> dog: Dog
-          |- hobby: Expected to decode String but found a number instead.
-    |> sons: [Son]
-       |- [Index 0] hobby: Expected to decode String but found a number instead.
-       |- [Index 0] age  : Expected to decode Int but found a string/data instead.
-       |- [Index 1] age  : Expected to decode Int but found an array instead.
- =========================================================================
+================================  [Smart Sentinel]  ================================
+Array<SomeModel> 👈🏻 👀
+   ╆━ Index 0
+      ┆┄ a: Expected to decode 'Int' but found ‘String’ instead.
+      ┆┄ b: Expected to decode 'Int' but found ’Array‘ instead.
+      ┆┄ c: No value associated with key.
+      ╆━ sub: SubModel
+         ┆┄ sub_a: No value associated with key.
+         ┆┄ sub_b: No value associated with key.
+         ┆┄ sub_c: No value associated with key.
+      ╆━ sub2s: [SubTwoModel]
+         ╆━ Index 0
+            ┆┄ sub2_a: No value associated with key.
+            ┆┄ sub2_b: No value associated with key.
+            ┆┄ sub2_c: No value associated with key.
+         ╆━ Index 1
+            ┆┄ sub2_a: Expected to decode 'Int' but found ’Array‘ instead.
+   ╆━ Index 1
+      ┆┄ a: No value associated with key.
+      ┆┄ b: Expected to decode 'Int' but found ‘String’ instead.
+      ┆┄ c: Expected to decode 'Int' but found ’Array‘ instead.
+      ╆━ sub: SubModel
+         ┆┄ sub_a: Expected to decode 'Int' but found ‘String’ instead.
+      ╆━ sub2s: [SubTwoModel]
+         ╆━ Index 0
+            ┆┄ sub2_a: Expected to decode 'Int' but found ‘String’ instead.
+         ╆━ Index 1
+            ┆┄ sub2_a: Expected to decode 'Int' but found 'null' instead.
+====================================================================================
+```
+
+
+
+如果你要使用它，请开启它：
+
+```
+SmartSentinel.debugMode = .verbose
+
+public enum Level: Int {
+    /// 不记录日志
+    case none
+    /// 详细的日志
+    case verbose
+    /// 警告日志：仅仅包含类型不匹配的情况
+    case alert
+}
+```
+
+如果你想获取这个日志用来上传服务器：
+
+```
+SmartSentinel.onLogGenerated { logs in
+}
 ```
 
 
@@ -161,6 +234,28 @@ If you are using HandyJSON and would like to replace it, follow this link.
 
 
 
+## Matters need attention（注意事项）
+
+### 1.  parse very large data(大数据量解析)
+
+When you parse very large data, try to avoid the compatibility of parsing exceptions, such as: more than one attribute is declared in the attribute, and the declared attribute type does not match. 
+
+Do not use @IgnoredKey when there are attributes that do not need to be parsed, override CodingKeys to ignore unwanted attribute parsing. 
+
+This can greatly improve the analytical efficiency.
+
+当你解析超大大数据时候，尽量避免解析异常的兼容，比如：属性中多声明了一属性，声明的属性类型不匹配。
+
+当有不需要参与解析属性，不要使用@IgnoredKey修饰，请重写CodingKeys忽略不需要的属性解析。
+
+这样可以大幅度的提升解析效率。
+
+
+
+
+
+
+
 ## FAQ
 
 If you're looking forward to learning more about the Codable protocol and the design thinking behind SmartCodable, check it out.
@@ -173,11 +268,6 @@ If you're looking forward to learning more about the Codable protocol and the de
 
 ## Github Stars
 ![GitHub stars](https://starchart.cc/intsig171/SmartCodable.svg?theme=dark)
-
-## Supporters
-[![Stargazers repo roster for @intsig171/SmartCodable](https://reporoster.com/stars/intsig171/SmartCodable)](https://github.com/intsig171/SmartCodable/stargazers)
-
-[![Forkers repo roster for @intsig171/SmartCodable](https://reporoster.com/forks/intsig171/SmartCodable)](https://github.com/intsig171/SmartCodable/network/members)
 
 ## Join us
 
