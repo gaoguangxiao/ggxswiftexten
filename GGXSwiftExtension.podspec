@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.8.6'
+  s.version          = '0.8.7'
   s.summary          = 'feat：`WKWebView`的拦截扩展'
 
 # This description is used to generate tags and improve search results.
