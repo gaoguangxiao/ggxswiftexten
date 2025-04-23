@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.8.7'
-  s.summary          = 'feat：`WKWebView`的拦截扩展'
+  s.version          = '0.8.8'
+  s.summary          = 'feat：`String`的ContentType'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
