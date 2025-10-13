@@ -14,6 +14,7 @@
 		0A2B5EE59902D3303AD2F8C80844E0D0 /* Pods-GGXSwiftExtension_ExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B74C2D8C949E7BC98F35B826449169 /* Pods-GGXSwiftExtension_ExampleTests-dummy.m */; };
 		0BCAC7B1581BBE0B1B65525CF2C581A4 /* JSONDecoderImpl+UnkeyedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EBED0A8C33BEBC9A1E7E9F2F5F189 /* JSONDecoderImpl+UnkeyedContainer.swift */; };
 		18AE98C846CCFF4B0AAAA97259DA144B /* DecodingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7A8352B85A003773A37B3E7C533115 /* DecodingCache.swift */; };
+		1EAA467A2E9CA0DF00A8D0F6 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA46792E9CA0DF00A8D0F6 /* UITableView+Extension.swift */; };
 		1EBB9C37CB2D30477AC17BF13AE7517D /* SmartAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF7C5A5B9720FCC5D47D181993283A9 /* SmartAny.swift */; };
 		1F914F0216DD49D6DE5661D8ED40BFFE /* WrapperLifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E080B594F92BADDD6542238057BD87 /* WrapperLifecycle.swift */; };
 		222466559689F507AC94BDA27C0933D2 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F582FD41BF9464880B031CF76FE51FE /* UIImageView+Extension.swift */; };
@@ -135,10 +136,11 @@
 		0F7A8352B85A003773A37B3E7C533115 /* DecodingCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecodingCache.swift; path = SmartCodable/Classes/JSONDecoder/Decoder/DecodingCache.swift; sourceTree = "<group>"; };
 		0FAC90F17822732368BE0AC530580006 /* JSONValue+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONValue+Extension.swift"; path = "SmartCodable/Classes/JSONValue/JSONValue+Extension.swift"; sourceTree = "<group>"; };
 		0FB8C6B4159B80239703064E8DD46905 /* Pods-GGXSwiftExtension_ExampleTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGXSwiftExtension_ExampleTests-Info.plist"; sourceTree = "<group>"; };
-		13E5DA302B0257F38AC8BFF77222297D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		13E5DA302B0257F38AC8BFF77222297D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		14A2247E8354A66395AF421A7B5EABA2 /* SmartCodable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartCodable.release.xcconfig; sourceTree = "<group>"; };
-		17D43B7A387C745FD6AA18B0580F7CAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		17D43B7A387C745FD6AA18B0580F7CAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B01402EE915AE1DC75A925C0DCB24B0 /* DateTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTransformer.swift; path = SmartCodable/Classes/Transformer/DateTransformer.swift; sourceTree = "<group>"; };
+		1EAA46792E9CA0DF00A8D0F6 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UITableView+Extension.swift"; path = "GGXSwiftExtension/Classes/UITableView+Extension.swift"; sourceTree = "<group>"; };
 		1FB128D7819D871A71E59801F8ABA3B7 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "GGXSwiftExtension/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
 		215F1D5B96B8F575EAE911DA28D96C28 /* SmartPublished.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartPublished.swift; path = SmartCodable/Classes/PropertyWrapper/SmartPublished.swift; sourceTree = "<group>"; };
 		254E7688F850C89F9C7FF0898BB9D7FA /* Pods-GGXSwiftExtension_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGXSwiftExtension_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 		39626FA571B6C75F84235869F954A8C3 /* Patcher+Transformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Patcher+Transformer.swift"; path = "SmartCodable/Classes/JSONDecoder/Patcher/Patcher+Transformer.swift"; sourceTree = "<group>"; };
 		3C775DF7B2FA6B3ED9267BEA2DB56640 /* UIKit+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Extension.swift"; path = "GGXSwiftExtension/Classes/UIKit+Extension.swift"; sourceTree = "<group>"; };
 		3CF14A8F7515999EFDF43F46AA0122BD /* SmartFlat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartFlat.swift; path = SmartCodable/Classes/PropertyWrapper/SmartFlat.swift; sourceTree = "<group>"; };
-		3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SmartCodable; path = SmartCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7BBCB412A023979A0152CD94EDB619 /* WKWebViewConfiguration+ZK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebViewConfiguration+ZK.swift"; path = "GGXSwiftExtension/Classes/WKWebViewConfiguration+ZK.swift"; sourceTree = "<group>"; };
 		4282B0FA6E6044C9DD71C6BB3B7A3AA2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "GGXSwiftExtension/Classes/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		447647F132307E8AEE59AC11E23BBEBB /* IgnoredKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IgnoredKey.swift; path = SmartCodable/Classes/PropertyWrapper/IgnoredKey.swift; sourceTree = "<group>"; };
@@ -167,18 +169,18 @@
 		5866CB48391554AD6D545089FC4330C4 /* SmartDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartDecodable.swift; path = SmartCodable/Classes/SmartCodable/SmartDecodable.swift; sourceTree = "<group>"; };
 		59501EB20A1AA95E936D5A58FFCD1AC7 /* DataTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransformer.swift; path = SmartCodable/Classes/Transformer/DataTransformer.swift; sourceTree = "<group>"; };
 		5F29ED89B7EFB88792EE319B253536FD /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GGXSwiftExtension/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GGXSwiftExtension; path = GGXSwiftExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GGXSwiftExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63966981BB2B969376DCD89A55E58BEE /* URL+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Extension.swift"; path = "GGXSwiftExtension/Classes/URL+Extension.swift"; sourceTree = "<group>"; };
 		63E869D094A6DB46692DBE60E2E44376 /* GGXSwiftExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGXSwiftExtension.debug.xcconfig; sourceTree = "<group>"; };
 		65A918DF03C77B8A11FF398BEF882601 /* GGXSwiftExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGXSwiftExtension-umbrella.h"; sourceTree = "<group>"; };
 		670C58B4C03BAED6EC20C9DEC9019305 /* Pods-GGXSwiftExtension_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GGXSwiftExtension_Example.modulemap"; sourceTree = "<group>"; };
 		688E42C8896CB0C807F60C1968206F83 /* Transformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transformer.swift; path = SmartCodable/Classes/Transformer/Transformer.swift; sourceTree = "<group>"; };
-		69975611C146F66BE86EF76DAA8BB6B4 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		69975611C146F66BE86EF76DAA8BB6B4 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6ED42D48C59B6B3CB12A6CC7D0E1AEC7 /* GGXSwiftExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGXSwiftExtension.release.xcconfig; sourceTree = "<group>"; };
 		6F2DA3954FCA1FB83F076361EC1467B9 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extension.swift"; path = "GGXSwiftExtension/Classes/UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		6F582FD41BF9464880B031CF76FE51FE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extension.swift"; path = "GGXSwiftExtension/Classes/UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6F88DE135C089441C40FEFF7B500C5D3 /* JSONEncoderImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncoderImpl.swift; path = SmartCodable/Classes/JSONEncoder/Impl/JSONEncoderImpl.swift; sourceTree = "<group>"; };
-		6F8D297314DC72E76718E4CCB3B776A8 /* Pods-GGXSwiftExtension_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGXSwiftExtension_Example"; path = Pods_GGXSwiftExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F8D297314DC72E76718E4CCB3B776A8 /* Pods_GGXSwiftExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGXSwiftExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		706686F4CCC229A577CD4A1CD409D5BD /* CGPoint+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+Extension.swift"; path = "GGXSwiftExtension/Classes/CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		70F646CE3116E491DCB077D543809390 /* Task+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+Extension.swift"; path = "GGXSwiftExtension/Classes/Task+Extension.swift"; sourceTree = "<group>"; };
 		71B46C8A3CDC2E32C175DC4439DDA160 /* Patcher+Provider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Patcher+Provider.swift"; path = "SmartCodable/Classes/JSONDecoder/Patcher/Patcher+Provider.swift"; sourceTree = "<group>"; };
@@ -198,9 +200,9 @@
 		95F9A89F67FC14A95D5891C0F4425AFB /* SmartKeyEncodingStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartKeyEncodingStrategy.swift; path = SmartCodable/Classes/JSONEncoder/SmartKeyEncodingStrategy.swift; sourceTree = "<group>"; };
 		980D1282FCE8AA6D1D22682029A4B295 /* UIImage+commonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+commonExtension.swift"; path = "GGXSwiftExtension/Classes/UIImage+commonExtension.swift"; sourceTree = "<group>"; };
 		9A9504DEE4C09C442A32C8EA068D3021 /* CGSize+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Extension.swift"; path = "GGXSwiftExtension/Classes/CGSize+Extension.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E8C50F6BCFE3917B8C5946CD4C64AA6 /* SmartAnyImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartAnyImpl.swift; path = SmartCodable/Classes/PropertyWrapper/SmartAny/SmartAnyImpl.swift; sourceTree = "<group>"; };
-		A05D3D175476CFD807D8A1A66D733051 /* Pods-GGXSwiftExtension_ExampleTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GGXSwiftExtension_ExampleTests"; path = Pods_GGXSwiftExtension_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05D3D175476CFD807D8A1A66D733051 /* Pods_GGXSwiftExtension_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGXSwiftExtension_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DCB3BD2960F322AB4F4AB88DAC8683 /* SafeDictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SafeDictionary.swift; path = SmartCodable/Classes/Sentinel/SafeDictionary.swift; sourceTree = "<group>"; };
 		A6C33112A6A1E3B2F4E3038754FFC3D6 /* Pods-GGXSwiftExtension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGXSwiftExtension_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A7CFAE86FFC97FC47930FE5D6102E824 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extension.swift"; path = "GGXSwiftExtension/Classes/UIApplication+Extension.swift"; sourceTree = "<group>"; };
@@ -332,10 +334,10 @@
 		961601439135FD2EE6C83740CEB5B976 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */,
-				6F8D297314DC72E76718E4CCB3B776A8 /* Pods-GGXSwiftExtension_Example */,
-				A05D3D175476CFD807D8A1A66D733051 /* Pods-GGXSwiftExtension_ExampleTests */,
-				3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable */,
+				607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension.framework */,
+				6F8D297314DC72E76718E4CCB3B776A8 /* Pods_GGXSwiftExtension_Example.framework */,
+				A05D3D175476CFD807D8A1A66D733051 /* Pods_GGXSwiftExtension_ExampleTests.framework */,
+				3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,6 +400,7 @@
 				3F7BBCB412A023979A0152CD94EDB619 /* WKWebViewConfiguration+ZK.swift */,
 				A271D098B6796264E3BEFB61E4F447CB /* Pod */,
 				6DF9BA204E0BCEC0986473949F7ECE50 /* Support Files */,
+				1EAA46792E9CA0DF00A8D0F6 /* UITableView+Extension.swift */,
 			);
 			name = GGXSwiftExtension;
 			path = ../..;
@@ -525,7 +528,6 @@
 				C9E080B594F92BADDD6542238057BD87 /* WrapperLifecycle.swift */,
 				5AA4F1ADCE5BFE028944735C6DAABD6E /* Support Files */,
 			);
-			name = SmartCodable;
 			path = SmartCodable;
 			sourceTree = "<group>";
 		};
@@ -583,7 +585,7 @@
 			);
 			name = "Pods-GGXSwiftExtension_ExampleTests";
 			productName = Pods_GGXSwiftExtension_ExampleTests;
-			productReference = A05D3D175476CFD807D8A1A66D733051 /* Pods-GGXSwiftExtension_ExampleTests */;
+			productReference = A05D3D175476CFD807D8A1A66D733051 /* Pods_GGXSwiftExtension_ExampleTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		34208A50A6E2389A7BB30C187CD9E2A4 /* GGXSwiftExtension */ = {
@@ -601,7 +603,7 @@
 			);
 			name = GGXSwiftExtension;
 			productName = GGXSwiftExtension;
-			productReference = 607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */;
+			productReference = 607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8AD7161D82469113F02F07DAD53D663F /* Pods-GGXSwiftExtension_Example */ = {
@@ -621,7 +623,7 @@
 			);
 			name = "Pods-GGXSwiftExtension_Example";
 			productName = Pods_GGXSwiftExtension_Example;
-			productReference = 6F8D297314DC72E76718E4CCB3B776A8 /* Pods-GGXSwiftExtension_Example */;
+			productReference = 6F8D297314DC72E76718E4CCB3B776A8 /* Pods_GGXSwiftExtension_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BD33823B9D08265B6F1D35EC259EE307 /* SmartCodable */ = {
@@ -639,7 +641,7 @@
 			);
 			name = SmartCodable;
 			productName = SmartCodable;
-			productReference = 3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable */;
+			productReference = 3E623AAE662B463FDDE8B268BDEA3E7B /* SmartCodable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -660,8 +662,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 961601439135FD2EE6C83740CEB5B976 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -780,6 +780,7 @@
 				9F74609D3E7F1E94876CD45CC01583E3 /* GGXSwiftExtension-dummy.m in Sources */,
 				9545FFB84DBBD01795AE236CFB95DFCB /* Int+Extension.swift in Sources */,
 				FF7E973208AD42A754E3CC46E97D0F76 /* LogSwift.swift in Sources */,
+				1EAA467A2E9CA0DF00A8D0F6 /* UITableView+Extension.swift in Sources */,
 				678FBD87175BFF263D79C572023A6677 /* ReplaceMe.swift in Sources */,
 				03B32098FF0126A5FA92BE70509FDCA3 /* String+Extension.swift in Sources */,
 				A5C31184C97073199BF96A24604A8F9C /* Task+Extension.swift in Sources */,
@@ -1119,8 +1120,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
