@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.9.3'
-  s.summary          = 'feat：增加tableView注册cell扩展'
+  s.version          = '0.9.4'
+  s.summary          = 'feat：屏幕方向'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
