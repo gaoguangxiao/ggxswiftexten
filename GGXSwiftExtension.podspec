@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.9.5'
+  s.version          = '0.9.6'
   s.summary          = 'feat：屏幕方向'
 
 # This description is used to generate tags and improve search results.
