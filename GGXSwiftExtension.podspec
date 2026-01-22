@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '0.9.8'
+  s.version          = '0.9.9'
   s.summary          = 'feat：移除base64前缀'
 
 # This description is used to generate tags and improve search results.
