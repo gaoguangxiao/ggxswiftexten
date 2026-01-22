@@ -384,6 +384,7 @@ public extension String {
         return MIMEType;
     }
     
+        
     //解析path路径
     func parsePushUrl() -> [String : String] {
         var result : [String : String] = [:]
@@ -484,16 +485,17 @@ public extension String {
     /// 图片base64转Data数据
     ///
     var base64Image: UIImage? {
-        if let base64Data = convertImageBase64ToImageData(imageBase64Str: self){
+        if let base64Data = self.removeBase64DataPrefixToData(){
             return UIImage.init(data: base64Data)!
         }
         return nil
     }
     
-    func convertImageBase64ToImageData(imageBase64Str: String) -> Data? {
-        var base64String = imageBase64Str
+    //移除前缀
+    func removeBase64DataPrefixToData() -> Data? {
+        var base64String = self
 
-        if base64String.hasPrefix("data:image") {
+        if base64String.hasPrefix("data:") {
             guard let newBase64String = base64String.components(separatedBy: ",").last else {
                 return nil
             }
@@ -505,6 +507,93 @@ public extension String {
         return decodedData
     }
     
+    ///获取JavaScript前缀格式
+    static func convertBase64PREFIXES(base64String: String) -> String? {
+        if base64String.hasPrefix("data:") {
+            guard let newBase64String = base64String.components(separatedBy: ",").first else {
+                return nil
+            }
+            return newBase64String
+        }
+        return nil
+    }
+    
+    /// Base64 前缀到扩展名的映射
+        private static let base64Prefixes: [String: String] = [
+            // 图片类型
+            "data:image/jpeg;base64,": "jpg",
+            "data:image/jpg;base64,": "jpg",
+            "data:image/png;base64,": "png",
+            "data:image/gif;base64,": "gif",
+            "data:image/webp;base64,": "webp",
+            "data:image/bmp;base64,": "bmp",
+            "data:image/svg+xml;base64,": "svg",
+            "data:image/tiff;base64,": "tiff",
+            "data:image/x-icon;base64,": "ico",
+            
+            // 音频类型
+            "data:audio/mpeg;base64,": "mp3",
+            "data:audio/wav;base64,": "wav",
+            "data:audio/ogg;base64,": "ogg",
+            "data:audio/aac;base64,": "aac",
+            "data:audio/flac;base64,": "flac",
+            "data:audio/midi;base64,": "mid",
+            
+            // 视频类型
+            "data:video/mp4;base64,": "mp4",
+            "data:video/webm;base64,": "webm",
+            "data:video/ogg;base64,": "ogv",
+            "data:video/x-msvideo;base64,": "avi",
+            "data:video/quicktime;base64,": "mov",
+            
+            // 文档类型
+            "data:application/pdf;base64,": "pdf",
+            "data:application/msword;base64,": "doc",
+            "data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,": "docx",
+            "data:application/vnd.ms-excel;base64,": "xls",
+            "data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,": "xlsx",
+            "data:application/vnd.ms-powerpoint;base64,": "ppt",
+            "data:application/vnd.openxmlformats-officedocument.presentationml.presentation;base64,": "pptx",
+            "data:text/plain;base64,": "txt",
+            "data:text/html;base64,": "html",
+            "data:text/css;base64,": "css",
+            "data:text/javascript;base64,": "js",
+            "data:application/json;base64,": "json",
+            "data:application/xml;base64,": "xml",
+            
+            // 压缩文件
+            "data:application/zip;base64,": "zip",
+            "data:application/x-rar-compressed;base64,": "rar",
+            "data:application/x-7z-compressed;base64,": "7z",
+            "data:application/gzip;base64,": "gz",
+            "data:application/x-tar;base64,": "tar",
+            
+            // 字体文件
+            "data:font/ttf;base64,": "ttf",
+            "data:font/otf;base64,": "otf",
+            "data:font/woff;base64,": "woff",
+            "data:font/woff2;base64,": "woff2",
+        ]
+    
+    /// 从 MIME 类型获取扩展名
+    static func getExtensionFromMimeType(_ mimeType: String) -> String? {
+        let prefix = "data:\(mimeType);base64,"
+        return base64Prefixes[prefix]
+    }
+    
+    /// 从字符串中提取 MIME 类型
+    static func extractMimeType(from base64String: String) -> String? {
+        let pattern = "^data:([^;]+);base64,"
+        
+        guard let regex = try? NSRegularExpression(pattern: pattern),
+              let match = regex.firstMatch(in: base64String,
+                                          range: NSRange(base64String.startIndex..., in: base64String)) else {
+            return nil
+        }
+        
+        let range = Range(match.range(at: 1), in: base64String)
+        return range.map { String(base64String[$0]) }
+    }
 }
 
 //MARK: Base64
