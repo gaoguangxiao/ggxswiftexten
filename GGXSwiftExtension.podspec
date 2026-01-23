@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '1.0.6'
+  s.version          = '1.0.7'
   s.summary          = 'feat：移除base64前缀'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/gaoguangxiao'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '小修' => 'gaoguangxiao125@sina.com' }
+  s.author           = { '小修' => '1137747423@qq.com' }
   s.source           = { :git => 'https://github.com/gaoguangxiao/ggxswiftexten.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
