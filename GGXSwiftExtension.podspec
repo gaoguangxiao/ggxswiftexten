@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGXSwiftExtension'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'feat：移除base64前缀'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.swift_version = '5.0'
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'GGXSwiftExtension/Classes/**/*'
+  s.source_files = 'Sources/**/*'
   
   # s.resource_bundles = {
   #   'GGXSwiftExtension' => ['GGXSwiftExtension/Assets/*.png']

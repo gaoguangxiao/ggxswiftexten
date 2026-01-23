@@ -1,5 +1,5 @@
 PODS:
-  - GGXSwiftExtension (0.8.6)
+  - GGXSwiftExtension (1.0.4)
   - SmartCodable (4.3.9)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGXSwiftExtension: ec270cce3e40ffbad855744b63d73ed6584fd639
+  GGXSwiftExtension: 717348ae42209bd1b0460410d9b5ba7f53c782c9
   SmartCodable: efc682e18fb5eac77f4c0497e37c79590710c192
 
 PODFILE CHECKSUM: 01c84f96c199579bff3eb76ddcada8ccb1525966

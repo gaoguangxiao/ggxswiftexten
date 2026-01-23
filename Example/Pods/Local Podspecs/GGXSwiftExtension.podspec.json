@@ -1,7 +1,7 @@
 {
   "name": "GGXSwiftExtension",
-  "version": "0.8.6",
-  "summary": "feat：`String`的URL编码",
+  "version": "1.0.4",
+  "summary": "feat：移除base64前缀",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,12 +13,12 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/ggxswiftexten.git",
-    "tag": "0.8.6"
+    "tag": "1.0.4"
   },
   "swift_versions": "5.0",
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "GGXSwiftExtension/Classes/**/*",
+  "source_files": "Sources/**/*",
   "swift_version": "5.0"
 }
